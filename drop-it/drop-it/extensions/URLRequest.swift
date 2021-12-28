@@ -13,7 +13,7 @@ extension URLRequest{
         case GET, PUT, POST, DELETE, PUSH
     }
     
-    static func create(url : URL, method : HTTPMethod, headers : [String:String],  body : [String:Any]? = nil) -> URLRequest{
+    static func create(url : URL, method : HTTPMethod, headers : [String:String],  body : Any? = nil) -> URLRequest{
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers

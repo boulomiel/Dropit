@@ -33,6 +33,9 @@
 		8744978B277ADB24009F8680 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978A277ADB24009F8680 /* Constants.swift */; };
 		8744978D277ADC28009F8680 /* DropCodable + ToDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978C277ADC28009F8680 /* DropCodable + ToDict.swift */; };
 		8744978F277ADCD1009F8680 /* DropCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978E277ADCD1009F8680 /* DropCodable.swift */; };
+		87449793277ADFC9009F8680 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449792277ADFC9009F8680 /* Observable.swift */; };
+		87449795277AE132009F8680 /* DropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449794277AE132009F8680 /* DropViewModel.swift */; };
+		87449797277AE369009F8680 /* Dropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449796277AE369009F8680 /* Dropper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		8744978A277ADB24009F8680 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8744978C277ADC28009F8680 /* DropCodable + ToDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropCodable + ToDict.swift"; sourceTree = "<group>"; };
 		8744978E277ADCD1009F8680 /* DropCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropCodable.swift; sourceTree = "<group>"; };
+		87449792277ADFC9009F8680 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		87449794277AE132009F8680 /* DropViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewModel.swift; sourceTree = "<group>"; };
+		87449796277AE369009F8680 /* Dropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		87449732277ACAEE009F8680 /* drop-it */ = {
 			isa = PBXGroup;
 			children = (
+				87449791277ADFBA009F8680 /* ViewModel */,
 				87449782277AD7DC009F8680 /* Models */,
 				8744977D277AD664009F8680 /* API */,
 				8744976D277ACE40009F8680 /* Controllers */,
@@ -214,8 +221,18 @@
 				87449785277AD841009F8680 /* Address.swift */,
 				87449788277AD88C009F8680 /* Bags.swift */,
 				8744978E277ADCD1009F8680 /* DropCodable.swift */,
+				87449796277AE369009F8680 /* Dropper.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		87449791277ADFBA009F8680 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87449792277ADFC9009F8680 /* Observable.swift */,
+				87449794277AE132009F8680 /* DropViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,12 +379,15 @@
 				87449784277AD7EE009F8680 /* User.swift in Sources */,
 				87449777277ACEE8009F8680 /* ResultViewController.swift in Sources */,
 				87449771277ACE79009F8680 /* AddressViewController.swift in Sources */,
+				87449797277AE369009F8680 /* Dropper.swift in Sources */,
 				87449786277AD841009F8680 /* Address.swift in Sources */,
 				8744977A277AD218009F8680 /* URLRequest.swift in Sources */,
 				87449736277ACAEE009F8680 /* SceneDelegate.swift in Sources */,
 				8744978D277ADC28009F8680 /* DropCodable + ToDict.swift in Sources */,
+				87449793277ADFC9009F8680 /* Observable.swift in Sources */,
 				87449773277ACE9D009F8680 /* BagsViewController.swift in Sources */,
 				8744977F277AD672009F8680 /* API.swift in Sources */,
+				87449795277AE132009F8680 /* DropViewModel.swift in Sources */,
 				87449775277ACEC9009F8680 /* ReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

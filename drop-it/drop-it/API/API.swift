@@ -12,11 +12,8 @@ class API{
     enum URlSessionError : Error {
         case httpError(Int), networkError(Error) ,decode
     }
-    
-    static let shared =  API()
-    private init(){}
-    
-     func start<T : Decodable>(_ type : T.Type,request : URLRequest ,completion : ((Result<T, URlSessionError>) -> Void)? ){
+        
+     func start<T : Decodable>(_ type : T.Type? ,request : URLRequest ,completion : ((Result<T, URlSessionError>) -> Void)? ){
         URLSession.shared.dataTask(with: request) { data, urlResponse, error in
             if let httpResponse = urlResponse as? HTTPURLResponse {
                 if !(200..<300).contains(httpResponse.statusCode){
@@ -27,6 +24,7 @@ class API{
             if let error = error {
                 completion?(.failure(.networkError(error)))
             }
+        
             
             if let data = data {
                 do{

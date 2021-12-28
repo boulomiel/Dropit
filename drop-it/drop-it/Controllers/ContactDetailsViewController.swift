@@ -10,4 +10,9 @@ import UIKit
 
 class ContactDetailsViewController : UIViewController, DropStoryboarded{
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
 }

@@ -9,7 +9,7 @@ import Foundation
 
 enum RequestType{
     
-    case getContactDetails, updateContactDetails(User), getShippingAddress, updateShippingAddress(Address), dropBags(Bags)
+    case getContactDetails, updateContactDetails(User), getShippingAddress, updateShippingAddress(Address), dropBags([String])
         
     private var url : URL {
         switch self {
@@ -26,7 +26,7 @@ enum RequestType{
         return ["Content-Type" : "application/json"]
     }
     
-    private var body : [String : Any]?{
+    private var body : Any?{
         switch self {
         case .getContactDetails, .getShippingAddress:
             return nil
@@ -35,7 +35,7 @@ enum RequestType{
         case .updateShippingAddress(let address):
             return address.toDict()
         case .dropBags(let bags):
-            return bags.toDict()
+            return bags
         }
     }
     

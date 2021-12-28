@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Bags : DropCodable{
-    var bags : [String]
-}
+//struct Bags : DropCodable{
+//    var bags : [String]
+//}
