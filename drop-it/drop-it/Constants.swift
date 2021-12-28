@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants{
     static let baseURL = "http://private-anon-eecd7360f7-droptask.apiary-mock.com/"
+    static let cellIdentifier =  "cell"
 }

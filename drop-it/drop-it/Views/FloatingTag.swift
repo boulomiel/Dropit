@@ -42,9 +42,7 @@ class FloatingTag : UIView , UIGestureRecognizerDelegate{
          {
             if self.frame.intersects(removeFrame!){
                 recognizer.isEnabled = false
-                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveLinear]) {
-                    self.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-                } completion: { finished in
+                scaleeWithAnimation(value: 0.1) { finished in
                     if finished{
                             self.delegate.inBasket()
                             self.removeFromSuperview()

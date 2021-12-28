@@ -12,6 +12,11 @@ class BagsViewController : UIViewController, DropStoryboarded{
     
     
     lazy var bagsViewModel = BagsViewModel()
+    @IBOutlet weak var reviewButtonOutlet: UIButton!{
+        didSet{
+            reviewButtonOutlet.transform = CGAffineTransform(scaleX: 0, y: 0)
+        }
+    }
     var basketView : BasketView!
     
     override func viewDidLoad() {
@@ -45,12 +50,17 @@ class BagsViewController : UIViewController, DropStoryboarded{
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    @IBAction func reviewButtonAction(_ sender: Any) {
+        Router.showReviewViewController()
+    }
     
 }
 
 extension BagsViewController : FloatingTagDelegate{
- 
     func inBasket() {
         basketView.bagCount += 1
+        if basketView.bagCount == 1 {
+            reviewButtonOutlet.scaleeWithAnimation(value: 1, completion: nil)
+        }
     }
 }
