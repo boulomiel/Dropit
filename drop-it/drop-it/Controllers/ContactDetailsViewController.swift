@@ -14,12 +14,37 @@ class ContactDetailsViewController : UIViewController, DropStoryboarded{
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var addressButtonOutlet: UIButton!
-    
+    lazy var dropViewModel =  DropViewModel(API())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavbar()
         configure()
+        setupViewModel()
+    }
+    
+    func setupViewModel(){
+        dropViewModel.getUser {[weak self] user in
+            DispatchQueue.main.async {
+                if let user = user {
+                    self?.fullNameTextField.text = user.fullName
+                    self?.phoneNumberTextField.text = user.phoneNumber.number
+                }
+            }
+        } _: { isUpdated in
+            if let isUpdated = isUpdated, isUpdated{
+                DispatchQueue.main.async {[weak self] in
+                    if let self = self{
+                        Router.showAdressViewController(self.dropViewModel)
+                    }
+                }
+            }
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        dropViewModel.disableUpdate()
     }
     
     private func configureNavbar(){
@@ -35,7 +60,10 @@ class ContactDetailsViewController : UIViewController, DropStoryboarded{
     }
     
     @IBAction func AddressButtonAction(_ sender: Any) {
-        Router.showAdressViewController()
+        guard let username = fullNameTextField.text, username.count > 3 else {return}
+        guard let phonenumber = phoneNumberTextField.text, username.count > 3 else {return}
+        let user = User(fullName: username, phoneNumber: PhoneNumber(countryCode: 40, number: phonenumber))
+        dropViewModel.updateUser(user: user)
     }
     
 }

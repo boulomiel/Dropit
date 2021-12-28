@@ -24,7 +24,7 @@ extension UIView {
         }
     }
     
-    func scaleeWithAnimation(value : CGFloat, completion : ((Bool)-> Void)? ){
+    func scaleWithAnimation(value : CGFloat, completion : ((Bool)-> Void)? ){
         UIView.animate(withDuration: 0.3, delay: 0, options: [.curveLinear], animations: {
             self.transform = CGAffineTransform(scaleX: value, y: value)
         }, completion: {finished in

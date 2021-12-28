@@ -15,8 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop It" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H67-MV-Z4o">
+                                <rect key="frame" x="121.5" y="244" width="171" height="67.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="62"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H67-MV-Z4o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OKg-mY-YYd"/>
+                            <constraint firstItem="H67-MV-Z4o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="WGR-Cp-A1q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hJv-pz-NhQ"/>
                     <nil key="simulatedTopBarMetrics"/>

@@ -10,6 +10,7 @@ import Foundation
 struct Dropper : DropCodable{
     
     let address: Address
-    let contacDetails: User
+    //cannot be read => key is 'contac Details'
+   // let contacDetails: User
     let bags: [String]
 }

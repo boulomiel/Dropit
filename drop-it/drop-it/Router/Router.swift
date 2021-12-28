@@ -43,18 +43,21 @@ struct Router{
         push(controller: vc)
     }
     
-    static func showAdressViewController(){
-        let vc =  AddressViewController.instantiante()
+    static func showAdressViewController(_ dropViewModel : DropViewModel){
+        let vc  : AddressViewController =  AddressViewController.instantiante()
+        vc.dropViewModel = dropViewModel
         push(controller: vc)
     }
     
-    static func showDropBagsViewController(){
-        let vc = BagsViewController.instantiante()
+    static func showDropBagsViewController(_ dropViewModel : DropViewModel){
+        let vc : BagsViewController = BagsViewController.instantiante()
+        vc.dropViewModel = dropViewModel
         push(controller: vc)
     }
     
-    static func showReviewViewController(){
-        let vc = ReviewViewController.instantiante()
+    static func showReviewViewController(_ dropViewModel : DropViewModel){
+        let vc : ReviewViewController = ReviewViewController.instantiante()
+        vc.dropViewModel = dropViewModel
         push(controller: vc)
     }
     
@@ -62,6 +65,4 @@ struct Router{
         let vc = ResultViewController.instantiante()
         push(controller: vc)
     }
-    
-    
 }

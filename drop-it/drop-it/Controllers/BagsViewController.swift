@@ -11,7 +11,7 @@ import UIKit
 class BagsViewController : UIViewController, DropStoryboarded{
     
     
-    lazy var bagsViewModel = BagsViewModel()
+    var dropViewModel : DropViewModel!
     @IBOutlet weak var reviewButtonOutlet: UIButton!{
         didSet{
             reviewButtonOutlet.transform = CGAffineTransform(scaleX: 0, y: 0)
@@ -25,7 +25,7 @@ class BagsViewController : UIViewController, DropStoryboarded{
         setupBasketView()
         configureBags()
     }
-    
+
     private func setupBasketView(){
         let point = CGPoint(x: self.view.center.x - 45 , y: self.view.frame.maxY - 160)
         basketView = BasketView(frame: CGRect(origin: point, size: CGSize(width: 90, height: 120)))
@@ -36,10 +36,11 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureBags(){
+        let userCurrentBags = dropViewModel.bagsViewModel.userCurrentBags
         let length = 50.0
         let top = 140.0
-        for i in 1...bagsViewModel.userCurrentBags.count{
-            self.view.addSubview(FloatingTag(delegate: self, frame: CGRect(x: Double(i) * length, y: top, width: 120, height: length), bagName: bagsViewModel.userCurrentBags[i - 1], removeFrame: basketView.frame))
+        for i in 1...userCurrentBags.count{
+            self.view.addSubview(FloatingTag(delegate: self, frame: CGRect(x: Double(i) * length, y: top, width: 120, height: length), bagName: userCurrentBags[i - 1], removeFrame: basketView.frame))
         }
     }
     
@@ -51,16 +52,21 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     @IBAction func reviewButtonAction(_ sender: Any) {
-        Router.showReviewViewController()
+        Router.showReviewViewController(dropViewModel)
     }
     
 }
 
 extension BagsViewController : FloatingTagDelegate{
-    func inBasket() {
-        basketView.bagCount += 1
-        if basketView.bagCount == 1 {
-            reviewButtonOutlet.scaleeWithAnimation(value: 1, completion: nil)
+    func inBasket(bagname : String?) {
+        dropViewModel.addBag(bagId: bagname) { bags in
+            DispatchQueue.main.async {[weak self] in
+                if !bags.isEmpty{
+                    self?.reviewButtonOutlet.scaleWithAnimation(value: 1, completion: nil)
+                    self?.basketView.bagCount = bags.count
+                }
+                
+            }
         }
     }
 }

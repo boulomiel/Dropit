@@ -45,6 +45,7 @@
 		8787233A277B23F4009D6658 /* BagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872339277B23F4009D6658 /* BagsViewModel.swift */; };
 		8787233C277B272B009D6658 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787233B277B272B009D6658 /* BasketView.swift */; };
 		8787233E277B274B009D6658 /* BasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8787233D277B274B009D6658 /* BasketView.xib */; };
+		878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		87872339277B23F4009D6658 /* BagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsViewModel.swift; sourceTree = "<group>"; };
 		8787233B277B272B009D6658 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		8787233D277B274B009D6658 /* BasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketView.xib; sourceTree = "<group>"; };
+		878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				87872335277B2309009D6658 /* ContactViewModel.swift */,
 				87872337277B23C2009D6658 /* AddressViewModel.swift */,
 				87872339277B23F4009D6658 /* BagsViewModel.swift */,
+				878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				8744978B277ADB24009F8680 /* Constants.swift in Sources */,
 				87872338277B23C2009D6658 /* AddressViewModel.swift in Sources */,
 				87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */,
+				878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */,
 				87449789277AD88C009F8680 /* Bags.swift in Sources */,
 				87872334277B1E29009D6658 /* UIViewController.swift in Sources */,
 				8787233C277B272B009D6658 /* BasketView.swift in Sources */,

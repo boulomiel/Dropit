@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FloatingTagDelegate : AnyObject {
-    func inBasket()
+    func inBasket(bagname : String?)
 }
 
 class FloatingTag : UIView , UIGestureRecognizerDelegate{
@@ -42,9 +42,9 @@ class FloatingTag : UIView , UIGestureRecognizerDelegate{
          {
             if self.frame.intersects(removeFrame!){
                 recognizer.isEnabled = false
-                scaleeWithAnimation(value: 0.1) { finished in
+                scaleWithAnimation(value: 0.1) { finished in
                     if finished{
-                            self.delegate.inBasket()
+                        self.delegate.inBasket(bagname: self.bagLabel.text)
                             self.removeFromSuperview()
                     }
                 }

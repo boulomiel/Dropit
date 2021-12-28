@@ -27,5 +27,27 @@ extension DropCodable{
             }
             return dict
         }
+    
+    func toArr()->[String]{
+        var arr = [String?]()
+        let mirrored =  Mirror.init(reflecting: self)
+        mirrored.children.forEach { child in
+            if let _ = child.label {
+                if let dropCodableChild = child.value as? DropCodable{
+                   let childArr =  dropCodableChild.toArr()
+                    arr.append(contentsOf: childArr)
+                }else if let dropCodableChild = child.value as? [DropCodable]{
+                    let childArr =  dropCodableChild.map{$0.toArr()}
+                    for child in childArr {
+                        arr.append(contentsOf: child )
+                    }
+                } else {
+                    arr.append("\(child.value)")
+                }
+            }
+        }
+        let result = arr.compactMap{$0}
+        return result
+    }
 }
 

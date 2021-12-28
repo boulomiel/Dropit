@@ -10,5 +10,14 @@ import UIKit
 
 class ResultViewController : UIViewController, DropStoryboarded{
     
+    @IBOutlet weak var successImage: UIImageView!{
+        didSet{
+            successImage.transform = CGAffineTransform(scaleX: 0, y: 0)
+        }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        successImage.scaleWithAnimation(value: 1,completion: nil)
+    }
 }
 

@@ -11,7 +11,9 @@ class Observable<T> {
     
     var value : T?{
         didSet{
-            listener?(value)
+            if let value = value {
+                listener?(value)
+            }
         }
     }
     
@@ -19,9 +21,9 @@ class Observable<T> {
         self.value = value
     }
     
-    var listener : ((T?)->Void)?
+    var listener : ((T)->Void)?
     
-    func start(_ listener : @escaping((T?)->Void)){
+    func bind(_ listener : @escaping((T?)->Void)){
         listener(value)
         self.listener = listener
     }
