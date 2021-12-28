@@ -8,7 +8,7 @@
 import Foundation
 
 class DropViewModel {
-
+    
     var userObserver : Observable<User>?
     var addressObserver : Observable<Address>?
     var bagsObserver : Observable<[String]>?

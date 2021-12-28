@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		87449734277ACAEE009F8680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449733277ACAEE009F8680 /* AppDelegate.swift */; };
 		87449736277ACAEE009F8680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449735277ACAEE009F8680 /* SceneDelegate.swift */; };
-		87449738277ACAEE009F8680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449737277ACAEE009F8680 /* ViewController.swift */; };
+		87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449737277ACAEE009F8680 /* SplashViewController.swift */; };
 		8744973B277ACAEE009F8680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87449739277ACAEE009F8680 /* Main.storyboard */; };
 		8744973D277ACAEF009F8680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8744973C277ACAEF009F8680 /* Assets.xcassets */; };
 		87449740277ACAEF009F8680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8744973E277ACAEF009F8680 /* LaunchScreen.storyboard */; };
@@ -36,6 +36,15 @@
 		87449793277ADFC9009F8680 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449792277ADFC9009F8680 /* Observable.swift */; };
 		87449795277AE132009F8680 /* DropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449794277AE132009F8680 /* DropViewModel.swift */; };
 		87449797277AE369009F8680 /* Dropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449796277AE369009F8680 /* Dropper.swift */; };
+		8787232B277AFE22009D6658 /* FloatingTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787232A277AFE22009D6658 /* FloatingTag.swift */; };
+		8787232D277AFE63009D6658 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787232C277AFE63009D6658 /* UIView.swift */; };
+		8787232F277AFE7B009D6658 /* FloatingTag.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8787232E277AFE7B009D6658 /* FloatingTag.xib */; };
+		87872334277B1E29009D6658 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872333277B1E28009D6658 /* UIViewController.swift */; };
+		87872336277B2309009D6658 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872335277B2309009D6658 /* ContactViewModel.swift */; };
+		87872338277B23C2009D6658 /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872337277B23C2009D6658 /* AddressViewModel.swift */; };
+		8787233A277B23F4009D6658 /* BagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872339277B23F4009D6658 /* BagsViewModel.swift */; };
+		8787233C277B272B009D6658 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787233B277B272B009D6658 /* BasketView.swift */; };
+		8787233E277B274B009D6658 /* BasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8787233D277B274B009D6658 /* BasketView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +68,7 @@
 		87449730277ACAEE009F8680 /* drop-it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "drop-it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87449733277ACAEE009F8680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87449735277ACAEE009F8680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87449737277ACAEE009F8680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87449737277ACAEE009F8680 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		8744973A277ACAEE009F8680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8744973C277ACAEF009F8680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8744973F277ACAEF009F8680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +98,15 @@
 		87449792277ADFC9009F8680 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		87449794277AE132009F8680 /* DropViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewModel.swift; sourceTree = "<group>"; };
 		87449796277AE369009F8680 /* Dropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropper.swift; sourceTree = "<group>"; };
+		8787232A277AFE22009D6658 /* FloatingTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTag.swift; sourceTree = "<group>"; };
+		8787232C277AFE63009D6658 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8787232E277AFE7B009D6658 /* FloatingTag.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingTag.xib; sourceTree = "<group>"; };
+		87872333277B1E28009D6658 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		87872335277B2309009D6658 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		87872337277B23C2009D6658 /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
+		87872339277B23F4009D6658 /* BagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsViewModel.swift; sourceTree = "<group>"; };
+		8787233B277B272B009D6658 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		8787233D277B274B009D6658 /* BasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +157,7 @@
 		87449732277ACAEE009F8680 /* drop-it */ = {
 			isa = PBXGroup;
 			children = (
+				87872329277AFE05009D6658 /* Views */,
 				87449791277ADFBA009F8680 /* ViewModel */,
 				87449782277AD7DC009F8680 /* Models */,
 				8744977D277AD664009F8680 /* API */,
@@ -147,7 +166,7 @@
 				87449765277ACB25009F8680 /* Router */,
 				87449733277ACAEE009F8680 /* AppDelegate.swift */,
 				87449735277ACAEE009F8680 /* SceneDelegate.swift */,
-				87449737277ACAEE009F8680 /* ViewController.swift */,
+				87449737277ACAEE009F8680 /* SplashViewController.swift */,
 				87449739277ACAEE009F8680 /* Main.storyboard */,
 				8744973C277ACAEF009F8680 /* Assets.xcassets */,
 				8744973E277ACAEF009F8680 /* LaunchScreen.storyboard */,
@@ -189,6 +208,8 @@
 			children = (
 				87449779277AD218009F8680 /* URLRequest.swift */,
 				8744978C277ADC28009F8680 /* DropCodable + ToDict.swift */,
+				8787232C277AFE63009D6658 /* UIView.swift */,
+				87872333277B1E28009D6658 /* UIViewController.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -231,8 +252,22 @@
 			children = (
 				87449792277ADFC9009F8680 /* Observable.swift */,
 				87449794277AE132009F8680 /* DropViewModel.swift */,
+				87872335277B2309009D6658 /* ContactViewModel.swift */,
+				87872337277B23C2009D6658 /* AddressViewModel.swift */,
+				87872339277B23F4009D6658 /* BagsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		87872329277AFE05009D6658 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8787232A277AFE22009D6658 /* FloatingTag.swift */,
+				8787232E277AFE7B009D6658 /* FloatingTag.xib */,
+				8787233B277B272B009D6658 /* BasketView.swift */,
+				8787233D277B274B009D6658 /* BasketView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +374,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8787233E277B274B009D6658 /* BasketView.xib in Resources */,
+				8787232F277AFE7B009D6658 /* FloatingTag.xib in Resources */,
 				87449740277ACAEF009F8680 /* LaunchScreen.storyboard in Resources */,
 				8744973D277ACAEF009F8680 /* Assets.xcassets in Resources */,
 				8744973B277ACAEE009F8680 /* Main.storyboard in Resources */,
@@ -369,8 +406,11 @@
 			files = (
 				87449767277ACB36009F8680 /* DropStoryboarded.swift in Sources */,
 				8744978B277ADB24009F8680 /* Constants.swift in Sources */,
-				87449738277ACAEE009F8680 /* ViewController.swift in Sources */,
+				87872338277B23C2009D6658 /* AddressViewModel.swift in Sources */,
+				87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */,
 				87449789277AD88C009F8680 /* Bags.swift in Sources */,
+				87872334277B1E29009D6658 /* UIViewController.swift in Sources */,
+				8787233C277B272B009D6658 /* BasketView.swift in Sources */,
 				87449781277AD79F009F8680 /* RequestType.swift in Sources */,
 				8744976F277ACE51009F8680 /* ContactDetailsViewController.swift in Sources */,
 				8744978F277ADCD1009F8680 /* DropCodable.swift in Sources */,
@@ -383,12 +423,16 @@
 				87449786277AD841009F8680 /* Address.swift in Sources */,
 				8744977A277AD218009F8680 /* URLRequest.swift in Sources */,
 				87449736277ACAEE009F8680 /* SceneDelegate.swift in Sources */,
+				8787232D277AFE63009D6658 /* UIView.swift in Sources */,
 				8744978D277ADC28009F8680 /* DropCodable + ToDict.swift in Sources */,
 				87449793277ADFC9009F8680 /* Observable.swift in Sources */,
 				87449773277ACE9D009F8680 /* BagsViewController.swift in Sources */,
 				8744977F277AD672009F8680 /* API.swift in Sources */,
+				8787232B277AFE22009D6658 /* FloatingTag.swift in Sources */,
 				87449795277AE132009F8680 /* DropViewModel.swift in Sources */,
 				87449775277ACEC9009F8680 /* ReviewViewController.swift in Sources */,
+				87872336277B2309009D6658 /* ContactViewModel.swift in Sources */,
+				8787233A277B23F4009D6658 /* BagsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
