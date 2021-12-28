@@ -18,6 +18,14 @@ class ResultViewController : UIViewController, DropStoryboarded{
     override func viewDidLoad() {
         super.viewDidLoad()
         successImage.scaleWithAnimation(value: 1,completion: nil)
+        configureNavbar()
+    }
+    
+    private func configureNavbar(){
+        setupTitle("")
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
