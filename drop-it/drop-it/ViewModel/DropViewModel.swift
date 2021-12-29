@@ -9,11 +9,11 @@ import Foundation
 
 class DropViewModel {
     
-    lazy var contactViewModel = ContactViewModel(apiClient)
-    lazy var addressViewModel =  AddressViewModel(apiClient)
-    lazy var bagsViewModel = BagsViewModel(apiClient)
-    lazy var reviewViewModel = ReviewViewModel(apiClient)
-    var apiClient : API
+    private lazy var contactViewModel = ContactViewModel(apiClient)
+    private lazy var addressViewModel =  AddressViewModel(apiClient)
+    private lazy var bagsViewModel = BagsViewModel(apiClient)
+    private lazy var reviewViewModel = ReviewViewModel(apiClient)
+    private var apiClient : API
     
     init(_ apiClient : API){
         self.apiClient = apiClient
@@ -74,6 +74,10 @@ class DropViewModel {
                 print("DropViewModel", error)
             }
         }
+    }
+    
+    func getCurrentBags() -> [String]{
+        return bagsViewModel.userCurrentBags
     }
     
     private func getBags() -> [String]{

@@ -51,7 +51,7 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureBags(){
-        let userCurrentBags = dropViewModel.bagsViewModel.userCurrentBags
+        let userCurrentBags = dropViewModel.getCurrentBags()
         let length = 50.0
         let top = 140.0
         for i in 1...userCurrentBags.count{
