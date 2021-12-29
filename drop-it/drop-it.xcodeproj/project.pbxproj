@@ -29,9 +29,8 @@
 		87449781277AD79F009F8680 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449780277AD79F009F8680 /* RequestType.swift */; };
 		87449784277AD7EE009F8680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449783277AD7EE009F8680 /* User.swift */; };
 		87449786277AD841009F8680 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449785277AD841009F8680 /* Address.swift */; };
-		87449789277AD88C009F8680 /* Bags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449788277AD88C009F8680 /* Bags.swift */; };
 		8744978B277ADB24009F8680 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978A277ADB24009F8680 /* Constants.swift */; };
-		8744978D277ADC28009F8680 /* DropCodable + ToDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978C277ADC28009F8680 /* DropCodable + ToDict.swift */; };
+		8744978D277ADC28009F8680 /* DropCodable + Mirroring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978C277ADC28009F8680 /* DropCodable + Mirroring.swift */; };
 		8744978F277ADCD1009F8680 /* DropCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744978E277ADCD1009F8680 /* DropCodable.swift */; };
 		87449793277ADFC9009F8680 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449792277ADFC9009F8680 /* Observable.swift */; };
 		87449795277AE132009F8680 /* DropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449794277AE132009F8680 /* DropViewModel.swift */; };
@@ -92,9 +91,8 @@
 		87449780277AD79F009F8680 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		87449783277AD7EE009F8680 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		87449785277AD841009F8680 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		87449788277AD88C009F8680 /* Bags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bags.swift; sourceTree = "<group>"; };
 		8744978A277ADB24009F8680 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8744978C277ADC28009F8680 /* DropCodable + ToDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropCodable + ToDict.swift"; sourceTree = "<group>"; };
+		8744978C277ADC28009F8680 /* DropCodable + Mirroring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropCodable + Mirroring.swift"; sourceTree = "<group>"; };
 		8744978E277ADCD1009F8680 /* DropCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropCodable.swift; sourceTree = "<group>"; };
 		87449792277ADFC9009F8680 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		87449794277AE132009F8680 /* DropViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewModel.swift; sourceTree = "<group>"; };
@@ -209,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				87449779277AD218009F8680 /* URLRequest.swift */,
-				8744978C277ADC28009F8680 /* DropCodable + ToDict.swift */,
+				8744978C277ADC28009F8680 /* DropCodable + Mirroring.swift */,
 				8787232C277AFE63009D6658 /* UIView.swift */,
 				87872333277B1E28009D6658 /* UIViewController.swift */,
 			);
@@ -242,7 +240,6 @@
 			children = (
 				87449783277AD7EE009F8680 /* User.swift */,
 				87449785277AD841009F8680 /* Address.swift */,
-				87449788277AD88C009F8680 /* Bags.swift */,
 				8744978E277ADCD1009F8680 /* DropCodable.swift */,
 				87449796277AE369009F8680 /* Dropper.swift */,
 			);
@@ -412,7 +409,6 @@
 				87872338277B23C2009D6658 /* AddressViewModel.swift in Sources */,
 				87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */,
 				878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */,
-				87449789277AD88C009F8680 /* Bags.swift in Sources */,
 				87872334277B1E29009D6658 /* UIViewController.swift in Sources */,
 				8787233C277B272B009D6658 /* BasketView.swift in Sources */,
 				87449781277AD79F009F8680 /* RequestType.swift in Sources */,
@@ -428,7 +424,7 @@
 				8744977A277AD218009F8680 /* URLRequest.swift in Sources */,
 				87449736277ACAEE009F8680 /* SceneDelegate.swift in Sources */,
 				8787232D277AFE63009D6658 /* UIView.swift in Sources */,
-				8744978D277ADC28009F8680 /* DropCodable + ToDict.swift in Sources */,
+				8744978D277ADC28009F8680 /* DropCodable + Mirroring.swift in Sources */,
 				87449793277ADFC9009F8680 /* Observable.swift in Sources */,
 				87449773277ACE9D009F8680 /* BagsViewController.swift in Sources */,
 				8744977F277AD672009F8680 /* API.swift in Sources */,

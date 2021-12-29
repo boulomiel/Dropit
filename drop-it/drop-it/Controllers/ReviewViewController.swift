@@ -32,7 +32,6 @@ class ReviewViewController : UIViewController, DropStoryboarded{
                 Router.showResultViewController()
             }
         }
-
     }
     
     private func configureTableView(){
@@ -42,10 +41,8 @@ class ReviewViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureNavbar(){
-        setupTitle("Review")
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupTitle(Constants.review)
+        setupBackButton()
     }
     
     @IBAction func confirmButtonAction(_ sender: Any) {

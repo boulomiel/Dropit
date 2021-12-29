@@ -10,7 +10,6 @@ import UIKit
 
 extension UIView {
     
-    
     func shadeView(shadowRadius : CGFloat =  4 , shadowOpacity : Float = 0.3){
         layer.shadowRadius = shadowRadius
         layer.shadowOpacity = shadowOpacity
@@ -31,5 +30,4 @@ extension UIView {
             completion?(finished)
         })
     }
-    
 }

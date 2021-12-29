@@ -45,10 +45,8 @@ class AddressViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureNavbar(){
-        setupTitle("Address Details")
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupTitle(Constants.addressDetails)
+        setupBackButton()
     }
     
     private func configure(){

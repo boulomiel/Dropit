@@ -48,9 +48,8 @@ class ContactDetailsViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureNavbar(){
-        setupTitle("Contact Details")
+        setupTitle(Constants.contactsDetais)
         navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func configure(){

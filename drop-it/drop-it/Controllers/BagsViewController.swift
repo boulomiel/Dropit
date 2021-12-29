@@ -10,14 +10,13 @@ import UIKit
 
 class BagsViewController : UIViewController, DropStoryboarded{
     
-    
+    var basketView : BasketView!
     var dropViewModel : DropViewModel!
     @IBOutlet weak var reviewButtonOutlet: UIButton!{
         didSet{
             reviewButtonOutlet.transform = CGAffineTransform(scaleX: 0, y: 0)
         }
     }
-    var basketView : BasketView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +44,13 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureNavbar(){
-        setupTitle("Pick your bags !")
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupTitle(Constants.pickYourBags)
+        setupBackButton()
     }
     
     @IBAction func reviewButtonAction(_ sender: Any) {
         Router.showReviewViewController(dropViewModel)
     }
-    
 }
 
 extension BagsViewController : FloatingTagDelegate{

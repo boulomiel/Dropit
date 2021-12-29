@@ -13,7 +13,6 @@ class DropViewModel {
     lazy var addressViewModel =  AddressViewModel(apiClient)
     lazy var bagsViewModel = BagsViewModel(apiClient)
     lazy var reviewViewModel = ReviewViewModel(apiClient)
-
     var apiClient : API
     
     init(_ apiClient : API){
@@ -56,20 +55,20 @@ class DropViewModel {
     func startTableReview(
         _ completion : @escaping([[Any]]) -> Void,
         _ isAccepted : @escaping(Bool) -> Void
-
+        
     ){
         reviewViewModel.start(populateData(), completion, isAccepted)
     }
     
     func acceptReview(){
-            apiClient.start( Dropper.self, request: RequestType.dropBags(getBags()).request) {[weak self] result in
-                switch result{
-                case .success(_):
-                    self?.reviewViewModel.acceptReview(true)
-                case .failure(let error):
-                    print("DropViewModel", error)
-                }
+        apiClient.start( Dropper.self, request: RequestType.dropBags(getBags()).request) {[weak self] result in
+            switch result{
+            case .success(_):
+                self?.reviewViewModel.acceptReview(true)
+            case .failure(let error):
+                print("DropViewModel", error)
             }
+        }
     }
     
     private func getBags() -> [String]{
@@ -89,11 +88,7 @@ class DropViewModel {
         if let addressArr = addressViewModel.address.value?.toArr(){
             data.append(addressArr)
         }
-        
-        if let bagsArr = bagsViewModel.bags.value{
-            let result =  bagsArr.compactMap{$0}
-            data.append(result)
-        }
+        data.append(getBags())
         return data
     }
 }

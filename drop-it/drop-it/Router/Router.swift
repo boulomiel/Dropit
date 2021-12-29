@@ -66,3 +66,15 @@ struct Router{
         push(controller: vc)
     }
 }
+
+extension DropStoryboarded{
+    
+   private static var name : String{
+       return Constants.drop
+    }
+    
+    fileprivate static func instantiante<T : UIViewController>()->T{
+        let className = String(describing: self)
+        return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: className) as! T
+    }
+}

@@ -14,5 +14,7 @@ struct Constants{
     static let contactsDetais =  "Contacts Details"
     static let addressDetails =  "Address Details"
     static let choosenBags =  "Choosen bags"
-
+    static let pickYourBags = "Pick your bags !"
+    static let review = "Review"
+    static let drop = "Drop"
 }

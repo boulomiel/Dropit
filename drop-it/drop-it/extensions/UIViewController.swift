@@ -9,8 +9,13 @@ import Foundation
 import UIKit
 
 extension UIViewController{
-    func setupTitle(_ title : String){
+    func setupTitle(_ title : String?){
         navigationItem.title = title
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func setupBackButton(){
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
     }
 }
