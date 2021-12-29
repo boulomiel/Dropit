@@ -18,4 +18,13 @@ extension UIViewController{
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
     }
+    
+    func resignKeyboard(){
+        let tapGesture =  UITapGestureRecognizer(target: self, action: #selector(resignKeyBoardSelector(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func resignKeyBoardSelector(_ sender : UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
 }

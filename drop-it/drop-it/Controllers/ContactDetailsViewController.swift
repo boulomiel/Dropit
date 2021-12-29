@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ContactDetailsViewController : UIViewController, DropStoryboarded{
+class ContactDetailsViewController : TextFieldHolderViewController, DropStoryboarded{
     
     @IBOutlet weak var infoContainer: UIView!
     @IBOutlet weak var fullNameTextField: UITextField!
@@ -21,9 +21,21 @@ class ContactDetailsViewController : UIViewController, DropStoryboarded{
         configureNavbar()
         configure()
         setupViewModel()
+        resignKeyboard()
+        setupTextFieldDelegate()
     }
     
-    func setupViewModel(){
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        dropViewModel.disableUpdate()
+    }
+    
+    private func setupTextFieldDelegate(){
+        fullNameTextField.delegate = self
+        phoneNumberTextField.delegate = self
+    }
+    
+    private func setupViewModel(){
         dropViewModel.getUser {[weak self] user in
             DispatchQueue.main.async {
                 if let user = user {
@@ -40,11 +52,6 @@ class ContactDetailsViewController : UIViewController, DropStoryboarded{
                 }
             }
         }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        dropViewModel.disableUpdate()
     }
     
     private func configureNavbar(){

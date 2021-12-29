@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AddressViewController : UIViewController, DropStoryboarded{
+class AddressViewController : TextFieldHolderViewController, DropStoryboarded{
     
     @IBOutlet weak var infoContainer: UIView!
     @IBOutlet weak var streetnameTextfield: UITextField!
@@ -22,6 +22,8 @@ class AddressViewController : UIViewController, DropStoryboarded{
         configureNavbar()
         configure()
         setupViewModel()
+        resignKeyboard()
+        setupTextfieldsDelegate()
     }
     
     private func setupViewModel(){
@@ -42,6 +44,12 @@ class AddressViewController : UIViewController, DropStoryboarded{
                 }
             }
         }
+    }
+    
+    private func setupTextfieldsDelegate(){
+        streetnameTextfield.delegate =  self
+        cityTextfield.delegate = self
+        countryTextfield.delegate = self
     }
     
     private func configureNavbar(){

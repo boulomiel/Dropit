@@ -44,6 +44,7 @@
 		8787233A277B23F4009D6658 /* BagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872339277B23F4009D6658 /* BagsViewModel.swift */; };
 		8787233C277B272B009D6658 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787233B277B272B009D6658 /* BasketView.swift */; };
 		8787233E277B274B009D6658 /* BasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8787233D277B274B009D6658 /* BasketView.xib */; };
+		87872341277C2683009D6658 /* TextFieldHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872340277C2683009D6658 /* TextFieldHolderViewController.swift */; };
 		878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		87872339277B23F4009D6658 /* BagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsViewModel.swift; sourceTree = "<group>"; };
 		8787233B277B272B009D6658 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		8787233D277B274B009D6658 /* BasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketView.xib; sourceTree = "<group>"; };
+		87872340277C2683009D6658 /* TextFieldHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHolderViewController.swift; sourceTree = "<group>"; };
 		878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 				87449772277ACE9D009F8680 /* BagsViewController.swift */,
 				87449774277ACEC9009F8680 /* ReviewViewController.swift */,
 				87449776277ACEE8009F8680 /* ResultViewController.swift */,
+				87872340277C2683009D6658 /* TextFieldHolderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				87449777277ACEE8009F8680 /* ResultViewController.swift in Sources */,
 				87449771277ACE79009F8680 /* AddressViewController.swift in Sources */,
 				87449797277AE369009F8680 /* Dropper.swift in Sources */,
+				87872341277C2683009D6658 /* TextFieldHolderViewController.swift in Sources */,
 				87449786277AD841009F8680 /* Address.swift in Sources */,
 				8744977A277AD218009F8680 /* URLRequest.swift in Sources */,
 				87449736277ACAEE009F8680 /* SceneDelegate.swift in Sources */,
@@ -619,6 +623,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,6 +652,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
