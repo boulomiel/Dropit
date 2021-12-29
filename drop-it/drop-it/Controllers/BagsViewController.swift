@@ -23,8 +23,24 @@ class BagsViewController : UIViewController, DropStoryboarded{
         configureNavbar()
         setupBasketView()
         configureBags()
+        setupBagsListener()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    private func setupBagsListener(){
+        dropViewModel.startBagsUpdate { bags in
+            DispatchQueue.main.async {[weak self] in
+                if !bags.isEmpty{
+                    self?.reviewButtonOutlet.scaleWithAnimation(value: 1, completion: nil)
+                    self?.basketView.bagCount = bags.count
+                }
+            }
+        }
+    }
+    
     private func setupBasketView(){
         let point = CGPoint(x: self.view.center.x - 45 , y: self.view.frame.maxY - 160)
         basketView = BasketView(frame: CGRect(origin: point, size: CGSize(width: 90, height: 120)))
@@ -54,15 +70,7 @@ class BagsViewController : UIViewController, DropStoryboarded{
 }
 
 extension BagsViewController : FloatingTagDelegate{
-    func inBasket(bagname : String?) {
-        dropViewModel.addBag(bagId: bagname) { bags in
-            DispatchQueue.main.async {[weak self] in
-                if !bags.isEmpty{
-                    self?.reviewButtonOutlet.scaleWithAnimation(value: 1, completion: nil)
-                    self?.basketView.bagCount = bags.count
-                }
-                
-            }
-        }
+    func inBasket(bagname : String) {
+        dropViewModel.addBag(bagId: bagname)
     }
 }

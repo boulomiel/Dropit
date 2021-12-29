@@ -10,17 +10,26 @@ import Foundation
 class BagsViewModel {
     var apiClient : API
     var userCurrentBags = ["Zara", "Nike", "Amazon"]
-    var bags : Observable<[String?]>  = Observable(value: [])
+    var bags : Observable<[String]>  = Observable(value: [])
     
     init(_ apiClient : API){
         self.apiClient = apiClient
     }
     
-    func addBag(
-        _ bagId : String?,
+    func start(
         _ completion: @escaping ([String?])->Void
     ){
+        clearBags()
         bags.listener = completion
+    }
+    
+    func addBag(
+        _ bagId : String
+    ){
         bags.value?.append(bagId)
+    }
+    
+    private func clearBags(){
+        bags.value  = []
     }
 }

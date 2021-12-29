@@ -45,11 +45,16 @@ class DropViewModel {
         addressViewModel.update(address)
     }
     
-    func addBag(
-        bagId : String?,
+    func startBagsUpdate(
         _ completion: @escaping ([String?])->Void
     ){
-        bagsViewModel.addBag(bagId, completion)
+        bagsViewModel.start(completion)
+    }
+    
+    func addBag(
+        bagId : String
+    ){
+        bagsViewModel.addBag(bagId)
     }
     
     func startTableReview(
@@ -74,8 +79,7 @@ class DropViewModel {
     private func getBags() -> [String]{
         var data = [String]()
         if let bagsArr = bagsViewModel.bags.value{
-            let result =  bagsArr.compactMap{$0}
-            data.append(contentsOf: result)
+            data.append(contentsOf: bagsArr)
         }
         return data
     }

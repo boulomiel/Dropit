@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FloatingTagDelegate : AnyObject {
-    func inBasket(bagname : String?)
+    func inBasket(bagname : String)
 }
 
 class FloatingTag : UIView , UIGestureRecognizerDelegate{
@@ -17,6 +17,7 @@ class FloatingTag : UIView , UIGestureRecognizerDelegate{
     var removeFrame : CGRect?
     var originPoint : CGPoint!
     var lastLocation = CGPoint(x: 0, y: 0)
+    var bagName : String!
     weak var delegate : FloatingTagDelegate!
     @IBOutlet weak var contentView : UIView!
     @IBOutlet weak var bagLabel: UILabel!
@@ -44,7 +45,7 @@ class FloatingTag : UIView , UIGestureRecognizerDelegate{
                 recognizer.isEnabled = false
                 scaleWithAnimation(value: 0.1) { finished in
                     if finished{
-                        self.delegate.inBasket(bagname: self.bagLabel.text)
+                        self.delegate.inBasket(bagname: self.bagName)
                             self.removeFromSuperview()
                     }
                 }
@@ -65,7 +66,6 @@ class FloatingTag : UIView , UIGestureRecognizerDelegate{
         lastLocation = self.center
     }
     
-
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
@@ -74,11 +74,10 @@ class FloatingTag : UIView , UIGestureRecognizerDelegate{
     init(delegate : FloatingTagDelegate, frame: CGRect, bagName : String, removeFrame : CGRect) {
         super.init(frame: frame)
         commonInit()
+        self.bagName = bagName
         self.bagLabel.text = bagName
         self.removeFrame = removeFrame
         self.originPoint = frame.origin
         self.delegate = delegate
     }
-
-
 }
