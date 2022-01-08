@@ -11,7 +11,7 @@ import UIKit
 class BagsViewController : UIViewController, DropStoryboarded{
     
     var basketView : BasketView!
-    var dropViewModel : DropViewModel!
+    lazy var bagsViewModel  = BagsViewModel()
     @IBOutlet weak var reviewButtonOutlet: UIButton!{
         didSet{
             reviewButtonOutlet.transform = CGAffineTransform(scaleX: 0, y: 0)
@@ -23,6 +23,7 @@ class BagsViewController : UIViewController, DropStoryboarded{
         configureNavbar()
         setupBasketView()
         configureBags()
+        bagsViewModel.clearAllBagsFromDb()
         setupBagsListener()
     }
     
@@ -31,7 +32,7 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     private func setupBagsListener(){
-        dropViewModel.startBagsUpdate { bags in
+        bagsViewModel.start{bags in
             DispatchQueue.main.async {[weak self] in
                 if !bags.isEmpty{
                     self?.reviewButtonOutlet.scaleWithAnimation(value: 1, completion: nil)
@@ -51,7 +52,7 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     private func configureBags(){
-        let userCurrentBags = dropViewModel.getCurrentBags()
+        let userCurrentBags = bagsViewModel.userCurrentBags
         let length = 50.0
         let top = 140.0
         for i in 1...userCurrentBags.count{
@@ -65,12 +66,12 @@ class BagsViewController : UIViewController, DropStoryboarded{
     }
     
     @IBAction func reviewButtonAction(_ sender: Any) {
-        Router.showReviewViewController(dropViewModel)
+        Router.showReviewViewController()
     }
 }
 
 extension BagsViewController : FloatingTagDelegate{
     func inBasket(bagname : String) {
-        dropViewModel.addBag(bagId: bagname)
+        bagsViewModel.addBag(bagname)
     }
 }

@@ -8,40 +8,36 @@
 import Foundation
 
 class AddressViewModel {
-    var apiClient : API
     var address : Observable<Address> = Observable(value: nil)
     var addressUpdated : Observable<Bool?> = Observable(value: false)
-
-    init(_ apiClient : API){
-        self.apiClient = apiClient
-    }
+    lazy var addressRepository : AddressRepository = {
+       let dataRepository =  DropItRepository()
+        return dataRepository.addressRepository
+    }()
     
+    var addressOperation : NetworkOperation<Address>?
+
     func start(
         _ completionAddress : @escaping((Address?)->Void),
         _ completionAddressUpdate : @escaping(Bool?) -> Void
     ){
         address.listener = completionAddress
         addressUpdated.listener = completionAddressUpdate
-        apiClient.start(Address.self, request: RequestType.getShippingAddress.request) {[weak self] result in
-            switch result{
-            case .success(let address):
-                self?.address.value = address
-            case .failure(let error):
-                print("AddressViewModel", error)
-            }
+        if let address : Address = addressRepository.fetchAll()?.first{
+            self.address.value = address
         }
     }
     
     func update(_ address : Address){
-        apiClient.start(Address.self, request: RequestType.updateShippingAddress(address).request) {[weak self] result in
-            switch result{
-            case .success(_):
+        addressOperation =  NetworkOperation(data: Address.self, requestType: .updateShippingAddress(address), completionBlock: {
+            DispatchQueue.main.async {[weak self] in
+                self?.addressRepository.removeAll()
+                self?.addressRepository.create(address)
                 self?.addressUpdated.value = true
                 self?.address.value = address
-            case .failure(let error):
-                print("AddressViewModel", error)
             }
-        }
+        })
+        addressOperation?.start()
     }
 }
 

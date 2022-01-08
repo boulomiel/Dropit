@@ -8,14 +8,13 @@
 import Foundation
 
 class BagsViewModel {
-    var apiClient : API
     var userCurrentBags = ["Zara", "Nike", "Amazon"]
     var bags : Observable<[String]>  = Observable(value: [])
     
-    init(_ apiClient : API){
-        self.apiClient = apiClient
-    }
-    
+    lazy var bagsRepository : BagsRepository = {
+        let dropitRepository =  DropItRepository()
+        return dropitRepository.bagsRepository
+    }()
     func start(
         _ completion: @escaping ([String?])->Void
     ){
@@ -27,6 +26,12 @@ class BagsViewModel {
         _ bagId : String
     ){
         bags.value?.append(bagId)
+        bagsRepository.create(bagId)
+    }
+    
+    func clearAllBagsFromDb(){
+        bagsRepository.removeAll()
+        clearBags()
     }
     
     private func clearBags(){

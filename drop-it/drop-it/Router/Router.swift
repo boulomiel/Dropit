@@ -21,8 +21,8 @@ struct Router{
     
     private static var navigationController : UINavigationController? = {
         guard let navController = root?.rootViewController as? UINavigationController else {
-                  print("Router", "No navigation controller at the root")
-                  return nil}
+            print("Router", "No navigation controller at the root")
+            return nil}
         return navController
     }()
     
@@ -43,21 +43,18 @@ struct Router{
         push(controller: vc)
     }
     
-    static func showAdressViewController(_ dropViewModel : DropViewModel){
+    static func showAdressViewController(){
         let vc  : AddressViewController =  AddressViewController.instantiante()
-        vc.dropViewModel = dropViewModel
         push(controller: vc)
     }
     
-    static func showDropBagsViewController(_ dropViewModel : DropViewModel){
+    static func showDropBagsViewController(){
         let vc : BagsViewController = BagsViewController.instantiante()
-        vc.dropViewModel = dropViewModel
         push(controller: vc)
     }
     
-    static func showReviewViewController(_ dropViewModel : DropViewModel){
+    static func showReviewViewController(){
         let vc : ReviewViewController = ReviewViewController.instantiante()
-        vc.dropViewModel = dropViewModel
         push(controller: vc)
     }
     
@@ -69,8 +66,8 @@ struct Router{
 
 extension DropStoryboarded{
     
-   private static var name : String{
-       return Constants.drop
+    private static var name : String{
+        return Constants.drop
     }
     
     fileprivate static func instantiante<T : UIViewController>()->T{

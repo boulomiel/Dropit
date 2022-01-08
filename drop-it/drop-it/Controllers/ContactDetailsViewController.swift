@@ -14,7 +14,7 @@ class ContactDetailsViewController : TextFieldHolderViewController, DropStoryboa
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var addressButtonOutlet: UIButton!
-    lazy var dropViewModel =  DropViewModel(API())
+    lazy var contactViewModel = ContactViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ContactDetailsViewController : TextFieldHolderViewController, DropStoryboa
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        dropViewModel.disableUpdate()
+        contactViewModel.disableUpdate()
     }
     
     private func setupTextFieldDelegate(){
@@ -36,8 +36,8 @@ class ContactDetailsViewController : TextFieldHolderViewController, DropStoryboa
     }
     
     private func setupViewModel(){
-        dropViewModel.getUser {[weak self] user in
-            DispatchQueue.main.async {
+        contactViewModel.bind { user in
+            DispatchQueue.main.async {[weak self] in
                 if let user = user {
                     self?.fullNameTextField.text = user.fullName
                     self?.phoneNumberTextField.text = user.phoneNumber.number
@@ -45,11 +45,7 @@ class ContactDetailsViewController : TextFieldHolderViewController, DropStoryboa
             }
         } _: { isUpdated in
             if let isUpdated = isUpdated, isUpdated{
-                DispatchQueue.main.async {[weak self] in
-                    if let self = self{
-                        Router.showAdressViewController(self.dropViewModel)
-                    }
-                }
+                Router.showAdressViewController()
             }
         }
     }
@@ -69,7 +65,7 @@ class ContactDetailsViewController : TextFieldHolderViewController, DropStoryboa
         guard let username = fullNameTextField.text, username.count > 3 else {return}
         guard let phonenumber = phoneNumberTextField.text, username.count > 3 else {return}
         let user = User(fullName: username, phoneNumber: PhoneNumber(countryCode: 40, number: phonenumber))
-        dropViewModel.updateUser(user: user)
+        contactViewModel.update(user: user)
     }
     
 }

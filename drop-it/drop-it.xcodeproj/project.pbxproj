@@ -46,6 +46,24 @@
 		8787233E277B274B009D6658 /* BasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8787233D277B274B009D6658 /* BasketView.xib */; };
 		87872341277C2683009D6658 /* TextFieldHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872340277C2683009D6658 /* TextFieldHolderViewController.swift */; };
 		878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */; };
+		87DA8C4027897A3B007F156D /* DropIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C3E27897A3B007F156D /* DropIt.xcdatamodeld */; };
+		87DA8C4B27897D6B007F156D /* BagDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4127897D6B007F156D /* BagDb+CoreDataClass.swift */; };
+		87DA8C4C27897D6B007F156D /* BagDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4227897D6B007F156D /* BagDb+CoreDataProperties.swift */; };
+		87DA8C4D27897D6B007F156D /* UserDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4327897D6B007F156D /* UserDb+CoreDataClass.swift */; };
+		87DA8C4E27897D6B007F156D /* UserDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4427897D6B007F156D /* UserDb+CoreDataProperties.swift */; };
+		87DA8C4F27897D6B007F156D /* AddressDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4527897D6B007F156D /* AddressDb+CoreDataClass.swift */; };
+		87DA8C5027897D6B007F156D /* AddressDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4627897D6B007F156D /* AddressDb+CoreDataProperties.swift */; };
+		87DA8C5127897D6B007F156D /* PhoneNumberDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4727897D6B007F156D /* PhoneNumberDb+CoreDataClass.swift */; };
+		87DA8C5227897D6B007F156D /* PhoneNumberDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4827897D6B007F156D /* PhoneNumberDb+CoreDataProperties.swift */; };
+		87DA8C5327897D6B007F156D /* DropperDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4927897D6B007F156D /* DropperDb+CoreDataClass.swift */; };
+		87DA8C5427897D6B007F156D /* DropperDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C4A27897D6B007F156D /* DropperDb+CoreDataProperties.swift */; };
+		87DA8C5827897E56007F156D /* RepositoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5727897E56007F156D /* RepositoryDelegate.swift */; };
+		87DA8C5A27897F3E007F156D /* DropItRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5927897F3E007F156D /* DropItRepository.swift */; };
+		87DA8C5C2789811F007F156D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5B2789811F007F156D /* UserRepository.swift */; };
+		87DA8C5E2789812F007F156D /* AddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5D2789812F007F156D /* AddressRepository.swift */; };
+		87DA8C6027898140007F156D /* BagsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5F27898140007F156D /* BagsRepository.swift */; };
+		87DA8C622789A410007F156D /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C612789A410007F156D /* NetworkOperation.swift */; };
+		87DA8C642789BB04007F156D /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C632789BB04007F156D /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +127,24 @@
 		8787233D277B274B009D6658 /* BasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketView.xib; sourceTree = "<group>"; };
 		87872340277C2683009D6658 /* TextFieldHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHolderViewController.swift; sourceTree = "<group>"; };
 		878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		87DA8C3F27897A3B007F156D /* DropIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DropIt.xcdatamodel; sourceTree = "<group>"; };
+		87DA8C4127897D6B007F156D /* BagDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagDb+CoreDataClass.swift"; sourceTree = "<group>"; };
+		87DA8C4227897D6B007F156D /* BagDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87DA8C4327897D6B007F156D /* UserDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDb+CoreDataClass.swift"; sourceTree = "<group>"; };
+		87DA8C4427897D6B007F156D /* UserDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87DA8C4527897D6B007F156D /* AddressDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDb+CoreDataClass.swift"; sourceTree = "<group>"; };
+		87DA8C4627897D6B007F156D /* AddressDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87DA8C4727897D6B007F156D /* PhoneNumberDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneNumberDb+CoreDataClass.swift"; sourceTree = "<group>"; };
+		87DA8C4827897D6B007F156D /* PhoneNumberDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneNumberDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87DA8C4927897D6B007F156D /* DropperDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropperDb+CoreDataClass.swift"; sourceTree = "<group>"; };
+		87DA8C4A27897D6B007F156D /* DropperDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropperDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87DA8C5727897E56007F156D /* RepositoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDelegate.swift; sourceTree = "<group>"; };
+		87DA8C5927897F3E007F156D /* DropItRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropItRepository.swift; sourceTree = "<group>"; };
+		87DA8C5B2789811F007F156D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		87DA8C5D2789812F007F156D /* AddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepository.swift; sourceTree = "<group>"; };
+		87DA8C5F27898140007F156D /* BagsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsRepository.swift; sourceTree = "<group>"; };
+		87DA8C612789A410007F156D /* NetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		87DA8C632789BB04007F156D /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +195,8 @@
 		87449732277ACAEE009F8680 /* drop-it */ = {
 			isa = PBXGroup;
 			children = (
+				87DA8C5627897E41007F156D /* Repository */,
+				87DA8C3D27897A26007F156D /* Database */,
 				87872329277AFE05009D6658 /* Views */,
 				87449791277ADFBA009F8680 /* ViewModel */,
 				87449782277AD7DC009F8680 /* Models */,
@@ -234,6 +272,7 @@
 			children = (
 				8744977E277AD672009F8680 /* API.swift */,
 				87449780277AD79F009F8680 /* RequestType.swift */,
+				87DA8C612789A410007F156D /* NetworkOperation.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -258,6 +297,7 @@
 				87872337277B23C2009D6658 /* AddressViewModel.swift */,
 				87872339277B23F4009D6658 /* BagsViewModel.swift */,
 				878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */,
+				87DA8C632789BB04007F156D /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -271,6 +311,44 @@
 				8787233D277B274B009D6658 /* BasketView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		87DA8C3D27897A26007F156D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				87DA8C5527897E2D007F156D /* DatabaseModels */,
+				87DA8C3E27897A3B007F156D /* DropIt.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		87DA8C5527897E2D007F156D /* DatabaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				87DA8C4127897D6B007F156D /* BagDb+CoreDataClass.swift */,
+				87DA8C4227897D6B007F156D /* BagDb+CoreDataProperties.swift */,
+				87DA8C4327897D6B007F156D /* UserDb+CoreDataClass.swift */,
+				87DA8C4427897D6B007F156D /* UserDb+CoreDataProperties.swift */,
+				87DA8C4527897D6B007F156D /* AddressDb+CoreDataClass.swift */,
+				87DA8C4627897D6B007F156D /* AddressDb+CoreDataProperties.swift */,
+				87DA8C4727897D6B007F156D /* PhoneNumberDb+CoreDataClass.swift */,
+				87DA8C4827897D6B007F156D /* PhoneNumberDb+CoreDataProperties.swift */,
+				87DA8C4927897D6B007F156D /* DropperDb+CoreDataClass.swift */,
+				87DA8C4A27897D6B007F156D /* DropperDb+CoreDataProperties.swift */,
+			);
+			path = DatabaseModels;
+			sourceTree = "<group>";
+		};
+		87DA8C5627897E41007F156D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				87DA8C5727897E56007F156D /* RepositoryDelegate.swift */,
+				87DA8C5927897F3E007F156D /* DropItRepository.swift */,
+				87DA8C5B2789811F007F156D /* UserRepository.swift */,
+				87DA8C5D2789812F007F156D /* AddressRepository.swift */,
+				87DA8C5F27898140007F156D /* BagsRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,20 +485,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DA8C6027898140007F156D /* BagsRepository.swift in Sources */,
+				87DA8C5827897E56007F156D /* RepositoryDelegate.swift in Sources */,
 				87449767277ACB36009F8680 /* DropStoryboarded.swift in Sources */,
 				8744978B277ADB24009F8680 /* Constants.swift in Sources */,
+				87DA8C5027897D6B007F156D /* AddressDb+CoreDataProperties.swift in Sources */,
+				87DA8C4E27897D6B007F156D /* UserDb+CoreDataProperties.swift in Sources */,
 				87872338277B23C2009D6658 /* AddressViewModel.swift in Sources */,
+				87DA8C622789A410007F156D /* NetworkOperation.swift in Sources */,
 				87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */,
 				878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */,
 				87872334277B1E29009D6658 /* UIViewController.swift in Sources */,
+				87DA8C4C27897D6B007F156D /* BagDb+CoreDataProperties.swift in Sources */,
 				8787233C277B272B009D6658 /* BasketView.swift in Sources */,
+				87DA8C5E2789812F007F156D /* AddressRepository.swift in Sources */,
 				87449781277AD79F009F8680 /* RequestType.swift in Sources */,
+				87DA8C4B27897D6B007F156D /* BagDb+CoreDataClass.swift in Sources */,
 				8744976F277ACE51009F8680 /* ContactDetailsViewController.swift in Sources */,
 				8744978F277ADCD1009F8680 /* DropCodable.swift in Sources */,
 				87449769277ACB51009F8680 /* Router.swift in Sources */,
 				87449734277ACAEE009F8680 /* AppDelegate.swift in Sources */,
+				87DA8C4D27897D6B007F156D /* UserDb+CoreDataClass.swift in Sources */,
+				87DA8C5A27897F3E007F156D /* DropItRepository.swift in Sources */,
+				87DA8C4027897A3B007F156D /* DropIt.xcdatamodeld in Sources */,
 				87449784277AD7EE009F8680 /* User.swift in Sources */,
 				87449777277ACEE8009F8680 /* ResultViewController.swift in Sources */,
+				87DA8C5C2789811F007F156D /* UserRepository.swift in Sources */,
+				87DA8C5227897D6B007F156D /* PhoneNumberDb+CoreDataProperties.swift in Sources */,
 				87449771277ACE79009F8680 /* AddressViewController.swift in Sources */,
 				87449797277AE369009F8680 /* Dropper.swift in Sources */,
 				87872341277C2683009D6658 /* TextFieldHolderViewController.swift in Sources */,
@@ -430,10 +521,15 @@
 				8787232D277AFE63009D6658 /* UIView.swift in Sources */,
 				8744978D277ADC28009F8680 /* DropCodable + Mirroring.swift in Sources */,
 				87449793277ADFC9009F8680 /* Observable.swift in Sources */,
+				87DA8C5327897D6B007F156D /* DropperDb+CoreDataClass.swift in Sources */,
+				87DA8C5127897D6B007F156D /* PhoneNumberDb+CoreDataClass.swift in Sources */,
 				87449773277ACE9D009F8680 /* BagsViewController.swift in Sources */,
+				87DA8C642789BB04007F156D /* SplashViewModel.swift in Sources */,
 				8744977F277AD672009F8680 /* API.swift in Sources */,
 				8787232B277AFE22009D6658 /* FloatingTag.swift in Sources */,
 				87449795277AE132009F8680 /* DropViewModel.swift in Sources */,
+				87DA8C4F27897D6B007F156D /* AddressDb+CoreDataClass.swift in Sources */,
+				87DA8C5427897D6B007F156D /* DropperDb+CoreDataProperties.swift in Sources */,
 				87449775277ACEC9009F8680 /* ReviewViewController.swift in Sources */,
 				87872336277B2309009D6658 /* ContactViewModel.swift in Sources */,
 				8787233A277B23F4009D6658 /* BagsViewModel.swift in Sources */,
@@ -782,6 +878,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87DA8C3E27897A3B007F156D /* DropIt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87DA8C3F27897A3B007F156D /* DropIt.xcdatamodel */,
+			);
+			currentVersion = 87DA8C3F27897A3B007F156D /* DropIt.xcdatamodel */;
+			path = DropIt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 87449728277ACAEE009F8680 /* Project object */;
 }

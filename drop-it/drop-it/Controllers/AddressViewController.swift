@@ -15,7 +15,9 @@ class AddressViewController : TextFieldHolderViewController, DropStoryboarded{
     @IBOutlet weak var cityTextfield: UITextField!
     @IBOutlet weak var countryTextfield: UITextField!
     @IBOutlet weak var bagsButtonOutlet: UIButton!
-    var dropViewModel : DropViewModel!
+    lazy var addressViewModel : AddressViewModel = {
+        return AddressViewModel()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class AddressViewController : TextFieldHolderViewController, DropStoryboarded{
     }
     
     private func setupViewModel(){
-        dropViewModel.getAddress { address in
+        addressViewModel.start { address in
             DispatchQueue.main.async {[weak self] in
                 if let address = address{
                     self?.streetnameTextfield.text = address.streetAddress
@@ -37,11 +39,7 @@ class AddressViewController : TextFieldHolderViewController, DropStoryboarded{
             }
         } _: { isUpdated in
             if let isUpdated =  isUpdated, isUpdated{
-                DispatchQueue.main.async {[weak self] in
-                    if let self = self{
-                        Router.showDropBagsViewController(self.dropViewModel)
-                    }
-                }
+                Router.showDropBagsViewController()
             }
         }
     }
@@ -77,9 +75,7 @@ class AddressViewController : TextFieldHolderViewController, DropStoryboarded{
             print("no country inserted")
             return
         }
-        dropViewModel.updateAddress(address: Address(streetAddress: street, city: city, country: country))
+        addressViewModel.update(Address(streetAddress: street, city: city, country: country))
     }
-    
-    
 }
 

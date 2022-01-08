@@ -11,7 +11,7 @@ import UIKit
 class ReviewViewController : UIViewController, DropStoryboarded{
     
     @IBOutlet weak var finalTableView: UITableView!
-    var dropViewModel : DropViewModel!
+    lazy var dropViewModel = DropViewModel()
     var tableReviewData =  [[Any]]()
     let titles = [Constants.contactsDetais, Constants.addressDetails, Constants.choosenBags]
     override func viewDidLoad() {
@@ -22,8 +22,8 @@ class ReviewViewController : UIViewController, DropStoryboarded{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dropViewModel.startTableReview { [weak self] result in
-            DispatchQueue.main.async {
+        dropViewModel.start { result in
+            DispatchQueue.main.async {[weak self] in 
                 self?.tableReviewData = result
                 self?.finalTableView.reloadData()
             }
@@ -46,7 +46,7 @@ class ReviewViewController : UIViewController, DropStoryboarded{
     }
     
     @IBAction func confirmButtonAction(_ sender: Any) {
-        dropViewModel.acceptReview()
+        dropViewModel.update()
     }
 }
 

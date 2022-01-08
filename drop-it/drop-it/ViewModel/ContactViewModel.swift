@@ -10,39 +10,44 @@ import UIKit
 
 class ContactViewModel{
     
-    var apiClient : API
+    lazy var userRepository : UserRepository = {
+       let dataRepository =  DropItRepository()
+        return dataRepository.userRepository
+    }()
+    
     var data : Observable<User> = Observable(value: nil)
     var isUserUpdated : Observable<Bool> = Observable(value: false)
-    
-    init(_ apiClient : API){
-        self.apiClient =  apiClient
-    }
-    
-    func start(
+    var updateOperation : NetworkOperation<User>?
+
+    func bind(
         _ completionUser : @escaping((User?)->Void),
-        _ completionUserUpdate : @escaping(Bool?) -> Void
+        _ completionUserUpdate : @escaping((Bool?) -> Void)
     ){
+        if let user : User = userRepository.fetchAll()?.first{
+            self.data.value =  user
+        }
         self.data.bind(completionUser)
         self.isUserUpdated.bind(completionUserUpdate)
-        API.shared.start(User.self, request: RequestType.getContactDetails.request) {[weak self] result in
-            switch result{
-            case .success(let user):
-                self?.data.value = user
-            case .failure(let error):
-                print("ContactViewModel", error)
-            }
-        }
     }
     
     func update(user : User){
-        API.shared.start(User.self, request: RequestType.updateContactDetails(user).request){[weak self] result in
-            switch result{
-            case .success(_):
-                self?.data.value = user
-                self?.isUserUpdated.value = true
-            case .failure(let error):
-                print("ContactViewModel", error)
-            }
+        updateOperation = NetworkOperation(data: User.self, requestType: .updateContactDetails(user),completionBlock: {[weak self] in
+            self?.updateRepository(user: user)
+    
+        })
+        updateOperation?.start()
+    }
+    
+    func disableUpdate(){
+        isUserUpdated.value = false
+    }
+    
+    private func updateRepository(user : User){
+        DispatchQueue.main.async {[weak self] in
+            self?.userRepository.removeAll()
+            self?.userRepository.create(user)
+            self?.data.value = user
+            self?.isUserUpdated.value = true
         }
     }
 }

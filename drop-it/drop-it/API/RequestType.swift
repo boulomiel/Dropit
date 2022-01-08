@@ -62,4 +62,20 @@ enum RequestType{
     var request : URLRequest {
         return URLRequest.create(url: url, method: httpMethod, headers: header, body: body)
     }
+    
+    var repository : RepositoryDelegate {
+        let repository =  DropItRepository()
+            switch self {
+            case .getContactDetails:
+                return repository.userRepository
+            case .updateContactDetails:
+                return repository.userRepository
+            case .getShippingAddress:
+                return repository.addressRepository
+            case .updateShippingAddress:
+                return repository.addressRepository
+            case .dropBags:
+                return repository.bagsRepository
+            }
+    }
 }
