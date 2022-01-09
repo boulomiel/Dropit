@@ -8,6 +8,9 @@
 import Foundation
 
 struct Address : DropCodable {
+    var id : String {
+        return UUID().uuidString
+    }
     var streetAddress : String
     var city : String
     var country : String

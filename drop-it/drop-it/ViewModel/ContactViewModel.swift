@@ -23,7 +23,7 @@ class ContactViewModel{
         _ completionUser : @escaping((User?)->Void),
         _ completionUserUpdate : @escaping((Bool?) -> Void)
     ){
-        if let user : User = userRepository.fetchAll()?.first{
+        if let user : User = userRepository.fetchAll().last{
             self.data.value =  user
         }
         self.data.bind(completionUser)
@@ -44,7 +44,6 @@ class ContactViewModel{
     
     private func updateRepository(user : User){
         DispatchQueue.main.async {[weak self] in
-            self?.userRepository.removeAll()
             self?.userRepository.create(user)
             self?.data.value = user
             self?.isUserUpdated.value = true

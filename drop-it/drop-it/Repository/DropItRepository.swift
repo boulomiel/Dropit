@@ -35,16 +35,18 @@ struct DropItRepository  {
     }
     
     func getBags() -> [String]{
-        return bagsRepository.fetchAll()
+        let bags : [Bag]  = bagsRepository.fetchAll()
+        let compacted =  bags.compactMap{$0.name}
+        return compacted
     }
     
     func getAllData() -> [[Any]]{
         var data = [[Any]]()
-        if let contactData : User = userRepository.fetchAll()?.first{
+        if let contactData : User = userRepository.fetchAll().last{
             data.append(contactData.toArr())
         }
         
-        if let addressData : Address = addressRepository.fetchAll()?.first{
+        if let addressData : Address = addressRepository.fetchAll().first{
             data.append(addressData.toArr())
         }
         data.append(getBags())

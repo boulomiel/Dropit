@@ -20,8 +20,10 @@ extension UserRepository : RepositoryDelegate{
         guard let user = obj as? User else{
             fatalError("UserRepository", file: "impossible to create a user")
         }
+        removeAll()
         do {
            let userDb = UserDb(context: context)
+            userDb.id =  user.id
             userDb.fullName  = user.fullName
             let phoneNumber =  PhoneNumberDb(context: context)
             phoneNumber.countryCode =  Int32(user.phoneNumber.countryCode)
@@ -48,6 +50,7 @@ extension UserRepository : RepositoryDelegate{
                 phoneNumberDb.number = user.phoneNumber.number
                 phoneNumberDb.countryCode =  Int32(user.phoneNumber.countryCode)
                 userPredicated.phoneNumber =  phoneNumberDb
+                userPredicated.id  = user.id
                 try context.save()
             }else{
                 create(obj)
@@ -94,20 +97,20 @@ extension UserRepository : RepositoryDelegate{
         return nil
     }
     
-    func fetchAll<T>() -> [T]? where T : DropCodable {
+    func fetchAll<T>() -> [T] where T : DropCodable {
         do{
             let users = try context.fetch(UserDb.fetchRequest())
-            let dropUsers: [User] = users.compactMap { userDb in
+            let dropUsers: [T] = users.compactMap { userDb in
                 if let userDbPhoneNumber =  userDb.phoneNumber{
                     let phoneNumber =  PhoneNumber(countryCode: Int(userDbPhoneNumber.countryCode ), number: userDbPhoneNumber.number ?? "" )
-                   return  User(fullName: userDb.fullName ?? "Walter White", phoneNumber: phoneNumber)
+                    return  User(fullName: userDb.fullName ?? "Walter White", phoneNumber: phoneNumber) as? T
                 }
                 return  nil
             }
-            return dropUsers as? [T]
+            return dropUsers.compactMap{$0}
         }catch{
             print("update", error)
-            return nil
+            return []
         }
     }
 }

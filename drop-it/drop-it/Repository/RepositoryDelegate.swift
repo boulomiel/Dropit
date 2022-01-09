@@ -13,5 +13,5 @@ protocol RepositoryDelegate {
     func update<T : DropCodable>(where: NSPredicate, _ obj : T)
     func removeAll()
     func fetch<T : DropCodable>(where : NSPredicate) -> T?
-    func fetchAll<T : DropCodable>()-> [T]?
+    func fetchAll<T : DropCodable>()-> [T]
 }

@@ -3,10 +3,12 @@
     <entity name="AddressDb" representedClassName="AddressDb" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="streetAddress" optional="YES" attributeType="String"/>
         <relationship name="ofUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserDb" inverseName="address" inverseEntity="UserDb"/>
     </entity>
     <entity name="BagDb" representedClassName="BagDb" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="DropperDb" representedClassName="DropperDb" syncable="YES">
@@ -21,14 +23,15 @@
     </entity>
     <entity name="UserDb" representedClassName="UserDb" syncable="YES">
         <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AddressDb" inverseName="ofUser" inverseEntity="AddressDb"/>
         <relationship name="phoneNumber" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhoneNumberDb" inverseName="ofUser" inverseEntity="PhoneNumberDb"/>
     </entity>
     <elements>
-        <element name="UserDb" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="AddressDb" positionX="-54" positionY="-9" width="128" height="89"/>
-        <element name="PhoneNumberDb" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="AddressDb" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="BagDb" positionX="0" positionY="63" width="128" height="59"/>
         <element name="DropperDb" positionX="-18" positionY="27" width="128" height="74"/>
-        <element name="BagDb" positionX="0" positionY="63" width="128" height="44"/>
+        <element name="PhoneNumberDb" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="UserDb" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

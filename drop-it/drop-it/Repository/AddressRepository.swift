@@ -21,28 +21,30 @@ extension AddressRepository : RepositoryDelegate {
     
     func create<T>(_ obj: T) where T : DropCodable {
         guard let address = obj as? Address else{
-            fatalError("UserRepository", file: "impossible to create a user")
+            fatalError("Address repository impossible to create address")
         }
+        removeAll()
         do {
             let addressDb = AddressDb(context: context)
             addressDb.country =  address.country
             addressDb.city =  address.city
             addressDb.streetAddress =  address.streetAddress
             try context.save()
-            print("Save Address", "address \(address.streetAddress) saved")
         }catch{
             print("Save Address", error)
         }
     }
     
-    func update<T>(where: NSPredicate, _ obj: T) where T : DropCodable {
+    func update<T>(where predicate : NSPredicate, _ obj: T) where T : DropCodable {
         guard let addressObj = obj as? Address else{
-            fatalError("UserRepository", file: "impossible to create a user")
+            fatalError("Address repository impossible to create address")
         }
         let request =  AddressDb.fetchRequest()
+        request.predicate = predicate
         do{
             if let address = try context.fetch(request).first{
                 address.city = addressObj.city
+                address.id = addressObj.id
                 address.streetAddress =  addressObj.streetAddress
                 address.country = addressObj.country
                 try context.save()
@@ -118,7 +120,7 @@ extension AddressRepository : RepositoryDelegate {
         return nil
     }
     
-    func fetchAll<T>() -> [T]? where T : DropCodable {
+    func fetchAll<T>() -> [T] where T : DropCodable {
         do{
             let request =  AddressDb.fetchRequest()
             let addresses = try context.fetch(request)
@@ -127,7 +129,7 @@ extension AddressRepository : RepositoryDelegate {
             }
         }catch{
             print("update", error)
-            return nil
+            return []
         }
     }
 }

@@ -26,7 +26,7 @@ class BagsViewModel {
         _ bagId : String
     ){
         bags.value?.append(bagId)
-        bagsRepository.create(bagId)
+        bagsRepository.create(Bag(name: bagId))
     }
     
     func clearAllBagsFromDb(){

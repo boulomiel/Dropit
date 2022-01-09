@@ -8,6 +8,9 @@
 import Foundation
 
 struct User : DropCodable{
+    var id  : String{
+       return  UUID().uuidString
+    }
     var fullName : String
     var phoneNumber : PhoneNumber
 }

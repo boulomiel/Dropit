@@ -2,7 +2,7 @@
 //  UserDb+CoreDataProperties.swift
 //  drop-it
 //
-//  Created by Ruben Mimoun on 08/01/2022.
+//  Created by Ruben Mimoun on 09/01/2022.
 //
 //
 
@@ -15,10 +15,11 @@ extension UserDb {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UserDb> {
         return NSFetchRequest<UserDb>(entityName: "UserDb")
     }
-    @NSManaged public var fullName: String?
-    @NSManaged public var phoneNumber: PhoneNumberDb?
-    @NSManaged public var address: AddressDb?
 
+    @NSManaged public var fullName: String?
+    @NSManaged public var id: String?
+    @NSManaged public var address: AddressDb?
+    @NSManaged public var phoneNumber: PhoneNumberDb?
 
 }
 

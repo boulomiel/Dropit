@@ -23,7 +23,7 @@ class AddressViewModel {
     ){
         address.listener = completionAddress
         addressUpdated.listener = completionAddressUpdate
-        if let address : Address = addressRepository.fetchAll()?.first{
+        if let address : Address = addressRepository.fetchAll().first{
             self.address.value = address
         }
     }
@@ -31,7 +31,6 @@ class AddressViewModel {
     func update(_ address : Address){
         addressOperation =  NetworkOperation(data: Address.self, requestType: .updateShippingAddress(address), completionBlock: {
             DispatchQueue.main.async {[weak self] in
-                self?.addressRepository.removeAll()
                 self?.addressRepository.create(address)
                 self?.addressUpdated.value = true
                 self?.address.value = address
