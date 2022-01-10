@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="AddressDb" representedClassName="AddressDb" syncable="YES">
+    <entity name="AddressDb" representedClassName="AddressDb" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="streetAddress" optional="YES" attributeType="String"/>
         <relationship name="ofUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserDb" inverseName="address" inverseEntity="UserDb"/>
     </entity>
-    <entity name="BagDb" representedClassName="BagDb" syncable="YES">
+    <entity name="BagDb" representedClassName="BagDb" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="DropperDb" representedClassName="DropperDb" syncable="YES">
+    <entity name="DropperDb" representedClassName="DropperDb" syncable="YES" codeGenerationType="class">
         <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserDb"/>
         <relationship name="bags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BagDb"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserDb"/>
     </entity>
-    <entity name="PhoneNumberDb" representedClassName="PhoneNumberDb" parentEntity="UserDb" syncable="YES">
+    <entity name="PhoneNumberDb" representedClassName="PhoneNumberDb" parentEntity="UserDb" syncable="YES" codeGenerationType="class">
         <attribute name="countryCode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="number" optional="YES" attributeType="String"/>
         <relationship name="ofUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserDb" inverseName="phoneNumber" inverseEntity="UserDb"/>
     </entity>
-    <entity name="UserDb" representedClassName="UserDb" syncable="YES">
+    <entity name="UserDb" representedClassName="UserDb" syncable="YES" codeGenerationType="class">
         <attribute name="fullName" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AddressDb" inverseName="ofUser" inverseEntity="AddressDb"/>

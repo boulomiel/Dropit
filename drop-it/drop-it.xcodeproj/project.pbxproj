@@ -35,16 +35,6 @@
 		87449793277ADFC9009F8680 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449792277ADFC9009F8680 /* Observable.swift */; };
 		87449795277AE132009F8680 /* DropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449794277AE132009F8680 /* DropViewModel.swift */; };
 		87449797277AE369009F8680 /* Dropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449796277AE369009F8680 /* Dropper.swift */; };
-		8767DB05278AA4A20007CF38 /* DropperDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DAFB278AA4A10007CF38 /* DropperDb+CoreDataClass.swift */; };
-		8767DB06278AA4A20007CF38 /* DropperDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DAFC278AA4A10007CF38 /* DropperDb+CoreDataProperties.swift */; };
-		8767DB07278AA4A20007CF38 /* BagDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DAFD278AA4A10007CF38 /* BagDb+CoreDataClass.swift */; };
-		8767DB08278AA4A20007CF38 /* BagDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DAFE278AA4A10007CF38 /* BagDb+CoreDataProperties.swift */; };
-		8767DB09278AA4A20007CF38 /* PhoneNumberDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DAFF278AA4A20007CF38 /* PhoneNumberDb+CoreDataClass.swift */; };
-		8767DB0A278AA4A20007CF38 /* PhoneNumberDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DB00278AA4A20007CF38 /* PhoneNumberDb+CoreDataProperties.swift */; };
-		8767DB0B278AA4A20007CF38 /* UserDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DB01278AA4A20007CF38 /* UserDb+CoreDataClass.swift */; };
-		8767DB0C278AA4A20007CF38 /* UserDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DB02278AA4A20007CF38 /* UserDb+CoreDataProperties.swift */; };
-		8767DB0D278AA4A20007CF38 /* AddressDb+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DB03278AA4A20007CF38 /* AddressDb+CoreDataClass.swift */; };
-		8767DB0E278AA4A20007CF38 /* AddressDb+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DB04278AA4A20007CF38 /* AddressDb+CoreDataProperties.swift */; };
 		8767DB10278AA72B0007CF38 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767DB0F278AA72B0007CF38 /* Bag.swift */; };
 		8787232B277AFE22009D6658 /* FloatingTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787232A277AFE22009D6658 /* FloatingTag.swift */; };
 		8787232D277AFE63009D6658 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787232C277AFE63009D6658 /* UIView.swift */; };
@@ -117,16 +107,6 @@
 		87449792277ADFC9009F8680 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		87449794277AE132009F8680 /* DropViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewModel.swift; sourceTree = "<group>"; };
 		87449796277AE369009F8680 /* Dropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropper.swift; sourceTree = "<group>"; };
-		8767DAFB278AA4A10007CF38 /* DropperDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropperDb+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8767DAFC278AA4A10007CF38 /* DropperDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropperDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8767DAFD278AA4A10007CF38 /* BagDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagDb+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8767DAFE278AA4A10007CF38 /* BagDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BagDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8767DAFF278AA4A20007CF38 /* PhoneNumberDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneNumberDb+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8767DB00278AA4A20007CF38 /* PhoneNumberDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneNumberDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8767DB01278AA4A20007CF38 /* UserDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDb+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8767DB02278AA4A20007CF38 /* UserDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8767DB03278AA4A20007CF38 /* AddressDb+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDb+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8767DB04278AA4A20007CF38 /* AddressDb+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDb+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8767DB0F278AA72B0007CF38 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		8787232A277AFE22009D6658 /* FloatingTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTag.swift; sourceTree = "<group>"; };
 		8787232C277AFE63009D6658 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -319,27 +299,9 @@
 		87DA8C3D27897A26007F156D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				87DA8C5527897E2D007F156D /* DatabaseModels */,
 				87DA8C3E27897A3B007F156D /* DropIt.xcdatamodeld */,
 			);
 			path = Database;
-			sourceTree = "<group>";
-		};
-		87DA8C5527897E2D007F156D /* DatabaseModels */ = {
-			isa = PBXGroup;
-			children = (
-				8767DAFB278AA4A10007CF38 /* DropperDb+CoreDataClass.swift */,
-				8767DAFC278AA4A10007CF38 /* DropperDb+CoreDataProperties.swift */,
-				8767DAFD278AA4A10007CF38 /* BagDb+CoreDataClass.swift */,
-				8767DAFE278AA4A10007CF38 /* BagDb+CoreDataProperties.swift */,
-				8767DAFF278AA4A20007CF38 /* PhoneNumberDb+CoreDataClass.swift */,
-				8767DB00278AA4A20007CF38 /* PhoneNumberDb+CoreDataProperties.swift */,
-				8767DB01278AA4A20007CF38 /* UserDb+CoreDataClass.swift */,
-				8767DB02278AA4A20007CF38 /* UserDb+CoreDataProperties.swift */,
-				8767DB03278AA4A20007CF38 /* AddressDb+CoreDataClass.swift */,
-				8767DB04278AA4A20007CF38 /* AddressDb+CoreDataProperties.swift */,
-			);
-			path = DatabaseModels;
 			sourceTree = "<group>";
 		};
 		87DA8C5627897E41007F156D /* Repository */ = {
@@ -488,8 +450,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8767DB0C278AA4A20007CF38 /* UserDb+CoreDataProperties.swift in Sources */,
-				8767DB05278AA4A20007CF38 /* DropperDb+CoreDataClass.swift in Sources */,
 				87DA8C6027898140007F156D /* BagsRepository.swift in Sources */,
 				87DA8C5827897E56007F156D /* RepositoryDelegate.swift in Sources */,
 				87449767277ACB36009F8680 /* DropStoryboarded.swift in Sources */,
@@ -499,25 +459,19 @@
 				87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */,
 				8767DB10278AA72B0007CF38 /* Bag.swift in Sources */,
 				878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */,
-				8767DB07278AA4A20007CF38 /* BagDb+CoreDataClass.swift in Sources */,
 				87872334277B1E29009D6658 /* UIViewController.swift in Sources */,
 				8787233C277B272B009D6658 /* BasketView.swift in Sources */,
 				87DA8C5E2789812F007F156D /* AddressRepository.swift in Sources */,
-				8767DB0A278AA4A20007CF38 /* PhoneNumberDb+CoreDataProperties.swift in Sources */,
 				87449781277AD79F009F8680 /* RequestType.swift in Sources */,
 				8744976F277ACE51009F8680 /* ContactDetailsViewController.swift in Sources */,
 				8744978F277ADCD1009F8680 /* DropCodable.swift in Sources */,
 				87449769277ACB51009F8680 /* Router.swift in Sources */,
 				87449734277ACAEE009F8680 /* AppDelegate.swift in Sources */,
 				87DA8C5A27897F3E007F156D /* DropItRepository.swift in Sources */,
-				8767DB0D278AA4A20007CF38 /* AddressDb+CoreDataClass.swift in Sources */,
-				8767DB06278AA4A20007CF38 /* DropperDb+CoreDataProperties.swift in Sources */,
 				87DA8C4027897A3B007F156D /* DropIt.xcdatamodeld in Sources */,
 				87449784277AD7EE009F8680 /* User.swift in Sources */,
-				8767DB09278AA4A20007CF38 /* PhoneNumberDb+CoreDataClass.swift in Sources */,
 				87449777277ACEE8009F8680 /* ResultViewController.swift in Sources */,
 				87DA8C5C2789811F007F156D /* UserRepository.swift in Sources */,
-				8767DB08278AA4A20007CF38 /* BagDb+CoreDataProperties.swift in Sources */,
 				87449771277ACE79009F8680 /* AddressViewController.swift in Sources */,
 				87449797277AE369009F8680 /* Dropper.swift in Sources */,
 				87872341277C2683009D6658 /* TextFieldHolderViewController.swift in Sources */,
@@ -525,12 +479,10 @@
 				8744977A277AD218009F8680 /* URLRequest.swift in Sources */,
 				87449736277ACAEE009F8680 /* SceneDelegate.swift in Sources */,
 				8787232D277AFE63009D6658 /* UIView.swift in Sources */,
-				8767DB0E278AA4A20007CF38 /* AddressDb+CoreDataProperties.swift in Sources */,
 				8744978D277ADC28009F8680 /* DropCodable + Mirroring.swift in Sources */,
 				87449793277ADFC9009F8680 /* Observable.swift in Sources */,
 				87449773277ACE9D009F8680 /* BagsViewController.swift in Sources */,
 				87DA8C642789BB04007F156D /* SplashViewModel.swift in Sources */,
-				8767DB0B278AA4A20007CF38 /* UserDb+CoreDataClass.swift in Sources */,
 				8744977F277AD672009F8680 /* API.swift in Sources */,
 				8787232B277AFE22009D6658 /* FloatingTag.swift in Sources */,
 				87449795277AE132009F8680 /* DropViewModel.swift in Sources */,
