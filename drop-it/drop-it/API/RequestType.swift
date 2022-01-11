@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RequestType{
+enum RequestType : RepositoryAccessor{
     
     case getContactDetails, updateContactDetails(User), getShippingAddress, updateShippingAddress(Address), dropBags([String])
         
@@ -77,5 +77,19 @@ enum RequestType{
             case .dropBags:
                 return repository.bagsRepository
             }
+    }
+    
+    func create(dropCodable : DropCodable){
+        switch self {
+        case .updateContactDetails:
+            createUser(user: dropCodable as! User)
+        case .updateShippingAddress:
+            createAddress(address: dropCodable as! Address)
+        case .dropBags:
+            print("Initial values :" , dropCodable)
+            saveNewDropper(dropper: dropCodable as! Dropper)
+        default:
+            print("Not updating methods", self)
+        }
     }
 }

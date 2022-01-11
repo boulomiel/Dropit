@@ -71,7 +71,7 @@ class NetworkOperation <T: DropCodable> : Operation{
                 switch result{
                 case .success(let data):
                     if let data  = data{
-                        self?.requestType.repository.create(data)
+                        self?.requestType.create(dropCodable: data)
                     }
                 case .failure(let error):
                     print(error)

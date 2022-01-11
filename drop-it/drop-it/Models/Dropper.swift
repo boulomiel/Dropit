@@ -13,7 +13,7 @@ struct Dropper : DropCodable{
     let bags: [String]
     
     private enum CodingKeys : String, CodingKey {
-        case contactDetails = "contact Details"
+        case contactDetails = "contac details"
         case address = "address"
         case bags = "bags"
     }

@@ -1,37 +1,19 @@
 {
-    "user" : {
-        "fullName": "Walter White",
-        "phoneNumber": {
-          "countryCode": 44,
-          "number": "123456789"
-        }
-      }
-    
-    "address" : {
-        {
-          "streetAddress": "205 Regent Street",
-          "city": "London",
-          "country": "GB"
-        }
-    }
-    
-    {
-      "address": {
+    "address": {
         "streetAddress": "205 Regent Street",
         "city": "London",
         "country": "GB"
-      },
-      "contac details": {
+    },
+    "contac details": {
         "fullName": "Walter White",
         "phoneNumber": {
-          "countryCode": 44,
-          "number": "123456789"
+            "countryCode": 44,
+            "number": "123456789"
         }
-      },
-      
-      "bags": [
+    },
+    
+    "bags": [
         "DA12345",
         "DA54321"
-      ]
-    }
+    ]
 }
