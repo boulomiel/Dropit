@@ -35,29 +35,10 @@ struct DropItRepository  {
     }
     
     func getJsonLocalData() -> Dropper{
-        let jsonURL =  Bundle.main.path(forResource: "mock", ofType:  "json")!
+        let jsonURL =  Bundle.main.path(forResource: "fallback", ofType:  "json")!
         let content =  try! String(contentsOfFile: jsonURL).data(using: .utf8)!
         let datasource = try! JSONDecoder().decode(Dropper.self, from: content)
         return datasource
-    }
-    
-    func getBags() -> [String]{
-        let bags : [Bag]  = bagsRepository.fetchAll()
-        let compacted =  bags.compactMap{$0.name}
-        return compacted
-    }
-    
-    func getAllData() -> [[Any]]{
-        var data = [[Any]]()
-        if let contactData : User = userRepository.fetchAll().last{
-            data.append(contactData.toArr())
-        }
-        
-        if let addressData : Address = addressRepository.fetchAll().first{
-            data.append(addressData.toArr())
-        }
-        data.append(getBags())
-        return data
     }
     
     func removeAll(){

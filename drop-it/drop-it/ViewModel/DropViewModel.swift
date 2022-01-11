@@ -7,9 +7,8 @@
 
 import Foundation
 
-class DropViewModel {
+class DropViewModel : RepositoryAccessor {
     
-    lazy var dropitRepository =  DropItRepository()
     var tableData : Observable<[[Any]]>  = Observable(value: [])
     var isAccepted : Observable<Bool>  = Observable(value: false)
     var dropperOperation : NetworkOperation<Dropper>?
@@ -20,12 +19,12 @@ class DropViewModel {
 
     ){
         tableData.listener = completion
-        tableData.value = dropitRepository.getAllData()
+        tableData.value = getAllData()
         isAccepted.listener = completionAccepted
     }
     
     func update(){
-        dropperOperation =  NetworkOperation(data: Dropper.self, requestType: .dropBags(dropitRepository.getBags()), completionBlock: {[weak self] in
+        dropperOperation =  NetworkOperation(data: Dropper.self, requestType: .dropBags(bags), completionBlock: {[weak self] in
             self?.isAccepted.value =  true
         })
         dropperOperation?.start()

@@ -24,7 +24,17 @@ extension RepositoryAccessor{
     }
     
     var bags : [String]{
-        dropitRepository.getBags()
+        let bags : [Bag] = dropitRepository.bagsRepository.fetchAll()
+        let result = bags.compactMap{bag in bag.name}
+        return result
+    }
+    
+    func getAllData() -> [[Any]]{
+        var data = [[Any]]()
+        data.append(contactDetails.toArr())
+        data.append(addressDetails.toArr())
+        data.append(bags)
+        return data
     }
     
     func saveNewDropper(dropper : Dropper){
