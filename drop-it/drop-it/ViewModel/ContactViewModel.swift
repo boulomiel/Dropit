@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class ContactViewModel{
-    
-    lazy var userRepository : UserRepository = {
-       let dataRepository =  DropItRepository()
-        return dataRepository.userRepository
-    }()
+class ContactViewModel : RepositoryAccessor{
+//
+//    lazy var userRepository : UserRepository = {
+//       let dataRepository =  DropItRepository()
+//        return dataRepository.userRepository
+//    }()
     
     var data : Observable<User> = Observable(value: nil)
     var isUserUpdated : Observable<Bool> = Observable(value: false)
@@ -23,9 +23,8 @@ class ContactViewModel{
         _ completionUser : @escaping((User?)->Void),
         _ completionUserUpdate : @escaping((Bool?) -> Void)
     ){
-        if let user : User = userRepository.fetchAll().last{
-            self.data.value =  user
-        }
+        
+        self.data.value =  contactDetails
         self.data.bind(completionUser)
         self.isUserUpdated.bind(completionUserUpdate)
     }
@@ -44,7 +43,7 @@ class ContactViewModel{
     
     private func updateRepository(user : User){
         DispatchQueue.main.async {[weak self] in
-            self?.userRepository.create(user)
+            self?.createUser(user: user)
             self?.data.value = user
             self?.isUserUpdated.value = true
         }

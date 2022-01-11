@@ -8,9 +8,14 @@
 import Foundation
 
 struct Dropper : DropCodable{
-    
     let address: Address
-    //cannot be read => key is 'contac Details'
-   // let contacDetails: User
+    let contactDetails: User
     let bags: [String]
+    
+    private enum CodingKeys : String, CodingKey {
+        case contactDetails = "contact Details"
+        case address = "address"
+        case bags = "bags"
+    }
+
 }

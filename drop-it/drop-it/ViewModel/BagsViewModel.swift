@@ -7,18 +7,15 @@
 
 import Foundation
 
-class BagsViewModel {
+class BagsViewModel : RepositoryAccessor {
+    
     var userCurrentBags = ["Zara", "Nike", "Amazon"]
     var bags : Observable<[String]>  = Observable(value: [])
     
-    lazy var bagsRepository : BagsRepository = {
-        let dropitRepository =  DropItRepository()
-        return dropitRepository.bagsRepository
-    }()
     func start(
         _ completion: @escaping ([String?])->Void
     ){
-        clearBags()
+        bags.value  = []
         bags.listener = completion
     }
     
@@ -26,15 +23,12 @@ class BagsViewModel {
         _ bagId : String
     ){
         bags.value?.append(bagId)
-        bagsRepository.create(Bag(name: bagId))
+        createBag(bag: Bag(name: bagId))
     }
     
     func clearAllBagsFromDb(){
-        bagsRepository.removeAll()
-        clearBags()
-    }
-    
-    private func clearBags(){
+        removeBags()
         bags.value  = []
     }
+
 }

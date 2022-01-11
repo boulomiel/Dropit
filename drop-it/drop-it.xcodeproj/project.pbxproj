@@ -46,7 +46,8 @@
 		8787233C277B272B009D6658 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8787233B277B272B009D6658 /* BasketView.swift */; };
 		8787233E277B274B009D6658 /* BasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8787233D277B274B009D6658 /* BasketView.xib */; };
 		87872341277C2683009D6658 /* TextFieldHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87872340277C2683009D6658 /* TextFieldHolderViewController.swift */; };
-		878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */; };
+		87C663E9278D5E12003F4A5D /* RepositoryAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C663E8278D5E12003F4A5D /* RepositoryAccessor.swift */; };
+		87C663ED278D5EFE003F4A5D /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 87C663EC278D5EFE003F4A5D /* mock.json */; };
 		87DA8C4027897A3B007F156D /* DropIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C3E27897A3B007F156D /* DropIt.xcdatamodeld */; };
 		87DA8C5827897E56007F156D /* RepositoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5727897E56007F156D /* RepositoryDelegate.swift */; };
 		87DA8C5A27897F3E007F156D /* DropItRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DA8C5927897F3E007F156D /* DropItRepository.swift */; };
@@ -118,7 +119,8 @@
 		8787233B277B272B009D6658 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		8787233D277B274B009D6658 /* BasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketView.xib; sourceTree = "<group>"; };
 		87872340277C2683009D6658 /* TextFieldHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHolderViewController.swift; sourceTree = "<group>"; };
-		878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		87C663E8278D5E12003F4A5D /* RepositoryAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAccessor.swift; sourceTree = "<group>"; };
+		87C663EC278D5EFE003F4A5D /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
 		87DA8C3F27897A3B007F156D /* DropIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DropIt.xcdatamodel; sourceTree = "<group>"; };
 		87DA8C5727897E56007F156D /* RepositoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDelegate.swift; sourceTree = "<group>"; };
 		87DA8C5927897F3E007F156D /* DropItRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropItRepository.swift; sourceTree = "<group>"; };
@@ -279,7 +281,6 @@
 				87872335277B2309009D6658 /* ContactViewModel.swift */,
 				87872337277B23C2009D6658 /* AddressViewModel.swift */,
 				87872339277B23F4009D6658 /* BagsViewModel.swift */,
-				878B8079277B80F300D5A7C0 /* ReviewViewModel.swift */,
 				87DA8C632789BB04007F156D /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
@@ -307,11 +308,13 @@
 		87DA8C5627897E41007F156D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				87C663EC278D5EFE003F4A5D /* mock.json */,
 				87DA8C5727897E56007F156D /* RepositoryDelegate.swift */,
 				87DA8C5927897F3E007F156D /* DropItRepository.swift */,
 				87DA8C5B2789811F007F156D /* UserRepository.swift */,
 				87DA8C5D2789812F007F156D /* AddressRepository.swift */,
 				87DA8C5F27898140007F156D /* BagsRepository.swift */,
+				87C663E8278D5E12003F4A5D /* RepositoryAccessor.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				8744973D277ACAEF009F8680 /* Assets.xcassets in Resources */,
 				8744973B277ACAEE009F8680 /* Main.storyboard in Resources */,
 				87449764277ACAFA009F8680 /* Drop.storyboard in Resources */,
+				87C663ED278D5EFE003F4A5D /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,12 +462,12 @@
 				87DA8C622789A410007F156D /* NetworkOperation.swift in Sources */,
 				87449738277ACAEE009F8680 /* SplashViewController.swift in Sources */,
 				8767DB10278AA72B0007CF38 /* Bag.swift in Sources */,
-				878B807A277B80F300D5A7C0 /* ReviewViewModel.swift in Sources */,
 				87872334277B1E29009D6658 /* UIViewController.swift in Sources */,
 				8787233C277B272B009D6658 /* BasketView.swift in Sources */,
 				87DA8C5E2789812F007F156D /* AddressRepository.swift in Sources */,
 				87449781277AD79F009F8680 /* RequestType.swift in Sources */,
 				8744976F277ACE51009F8680 /* ContactDetailsViewController.swift in Sources */,
+				87C663E9278D5E12003F4A5D /* RepositoryAccessor.swift in Sources */,
 				8744978F277ADCD1009F8680 /* DropCodable.swift in Sources */,
 				87449769277ACB51009F8680 /* Router.swift in Sources */,
 				87449734277ACAEE009F8680 /* AppDelegate.swift in Sources */,

@@ -7,14 +7,11 @@
 
 import Foundation
 
-class AddressViewModel {
+class AddressViewModel  : RepositoryAccessor{
+    
     var address : Observable<Address> = Observable(value: nil)
     var addressUpdated : Observable<Bool?> = Observable(value: false)
-    lazy var addressRepository : AddressRepository = {
-       let dataRepository =  DropItRepository()
-        return dataRepository.addressRepository
-    }()
-    
+
     var addressOperation : NetworkOperation<Address>?
 
     func start(
@@ -23,15 +20,13 @@ class AddressViewModel {
     ){
         address.listener = completionAddress
         addressUpdated.listener = completionAddressUpdate
-        if let address : Address = addressRepository.fetchAll().first{
-            self.address.value = address
-        }
+        address.value = addressDetails
     }
     
     func update(_ address : Address){
         addressOperation =  NetworkOperation(data: Address.self, requestType: .updateShippingAddress(address), completionBlock: {
             DispatchQueue.main.async {[weak self] in
-                self?.addressRepository.create(address)
+                self?.createAddress(address: address)
                 self?.addressUpdated.value = true
                 self?.address.value = address
             }
